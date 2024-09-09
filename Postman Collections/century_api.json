@@ -18,7 +18,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/product-categories?filters[level][$eq]=1",
+							"raw": "{{URL}}api/product-categories?filters[level][$eq]=1&populate=children_category&populate=children_category.children_category",
 							"host": [
 								"{{URL}}api"
 							],
@@ -29,6 +29,14 @@
 								{
 									"key": "filters[level][$eq]",
 									"value": "1"
+								},
+								{
+									"key": "populate",
+									"value": "children_category"
+								},
+								{
+									"key": "populate",
+									"value": "children_category.children_category"
 								}
 							]
 						}
@@ -95,6 +103,41 @@
 								{
 									"key": "pagination[pageSize]",
 									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}api/product-categories?filters[slug][$eq]=blockboards&populate[0]=products&populate[1]=products.product_priceing",
+					"id": "8a227eb8-c425-4bf8-8900-1901068bd801",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-categories?filters[slug][$eq]=blockboards&populate[0]=products&populate[1]=products.product_priceing",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-categories"
+							],
+							"query": [
+								{
+									"key": "filters[slug][$eq]",
+									"value": "blockboards"
+								},
+								{
+									"key": "populate[0]",
+									"value": "products"
+								},
+								{
+									"key": "populate[1]",
+									"value": "products.product_priceing"
 								}
 							]
 						}
