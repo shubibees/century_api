@@ -249,14 +249,45 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "price_list",
 					"id": "3d80d96c-c4d7-4ecc-a317-84ef391be5c8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-priceings?filters[location_state][state][$eq]=Delhi&populate[0]=product&populate[1]=location_state&pagination[page]=10&pagination[pageSize]=10",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-priceings"
+							],
+							"query": [
+								{
+									"key": "filters[location_state][state][$eq]",
+									"value": "Delhi"
+								},
+								{
+									"key": "populate[0]",
+									"value": "product"
+								},
+								{
+									"key": "populate[1]",
+									"value": "location_state"
+								},
+								{
+									"key": "pagination[page]",
+									"value": "10"
+								},
+								{
+									"key": "pagination[pageSize]",
+									"value": "10"
+								}
+							]
+						}
 					},
 					"response": []
 				}
