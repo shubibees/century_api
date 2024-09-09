@@ -1,0 +1,502 @@
+{
+	"info": {
+		"_postman_id": "f9e043fa-e3af-46b0-bea0-10d061117478",
+		"name": "strapi_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "get_category",
+					"id": "2d4d2653-f3a0-498e-8dae-3bd21c04cbe5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-categories?filters[level][$eq]=1&populate=children_category&populate=children_category.children_category",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-categories"
+							],
+							"query": [
+								{
+									"key": "filters[level][$eq]",
+									"value": "1"
+								},
+								{
+									"key": "populate",
+									"value": "children_category"
+								},
+								{
+									"key": "populate",
+									"value": "children_category.children_category"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "c3cec88f-9455-465f-860d-2c87f09b3bdc"
+		},
+		{
+			"name": "blogs",
+			"item": [
+				{
+					"name": "blog",
+					"id": "5c8d0ae4-1f48-472c-9774-c73e8f4a3175",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "503fb9b6d3e9f2afc05742d7f5efd618c14ae5f233411f9394360b1719a3c3e20d9064e18cf6ecc67f43ec4e5df5422bee1859d249c94c59c3e934d23952cbbacc2f79574c26fdc56b9d6f99c2ff17e2f4a63e1fb61f2924df183a47d12ef698579b12c38319d2faf7de35e33f3b2591b5e968534fab8def50d2bb8635c32317"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/blogs?populate=*&sort=published_date:desc&pagination[page]=1&pagination[pageSize]=6",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"blogs"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								},
+								{
+									"key": "sort",
+									"value": "published_date:desc"
+								},
+								{
+									"key": "pagination[page]",
+									"value": "1"
+								},
+								{
+									"key": "pagination[pageSize]",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blog_slug",
+					"id": "06184b56-9c00-4648-bc90-1e5781a19c27",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "503fb9b6d3e9f2afc05742d7f5efd618c14ae5f233411f9394360b1719a3c3e20d9064e18cf6ecc67f43ec4e5df5422bee1859d249c94c59c3e934d23952cbbacc2f79574c26fdc56b9d6f99c2ff17e2f4a63e1fb61f2924df183a47d12ef698579b12c38319d2faf7de35e33f3b2591b5e968534fab8def50d2bb8635c32317"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/blogs?populate=*&filters[blog_category][title][$eq]=Eshop",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"blogs"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								},
+								{
+									"key": "filters[blog_category][title][$eq]",
+									"value": "Eshop"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blog_category",
+					"id": "0f691039-9160-4091-afdf-cff5094c5f94",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "503fb9b6d3e9f2afc05742d7f5efd618c14ae5f233411f9394360b1719a3c3e20d9064e18cf6ecc67f43ec4e5df5422bee1859d249c94c59c3e934d23952cbbacc2f79574c26fdc56b9d6f99c2ff17e2f4a63e1fb61f2924df183a47d12ef698579b12c38319d2faf7de35e33f3b2591b5e968534fab8def50d2bb8635c32317"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}api/blog-categories"
+					},
+					"response": []
+				},
+				{
+					"name": "blog-home",
+					"id": "6c699438-6e77-4a88-84f3-fa6365dff4f3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "tags",
+					"id": "8d62bd47-eaee-410e-b674-89b2c553c846",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/tags?populate=*",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"tags"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "f8c42bea-ed8a-4983-b351-e1445da8997e"
+		},
+		{
+			"name": "page",
+			"item": [
+				{
+					"name": "home_page",
+					"id": "a7f555d0-a496-4bd8-99c7-61d75f1cfafb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/home?populate[banner][populate][banner]=*&populate[Ideal_tools_for]=*&populate[Shop_Now]=*&populate[Where_Innovation]=*",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"home"
+							],
+							"query": [
+								{
+									"key": "populate[banner][populate][banner]",
+									"value": "*"
+								},
+								{
+									"key": "populate[Ideal_tools_for]",
+									"value": "*"
+								},
+								{
+									"key": "populate[Shop_Now]",
+									"value": "*"
+								},
+								{
+									"key": "populate[Where_Innovation]",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_page_by_slugs",
+					"id": "d81a30de-707b-48a7-8b5b-f4a21200789c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1a332108a2797f157e64c8847b671641eb3730ea8c2fa23238704cdb64fff92e94f3a5d9dcd84ea2fdfe6f5df45c27632720defc9f979ddb0f8bb7e0b7ca33cc7028b707c0a89271e2660143ea1514111e7d7be98fc176b38e6a16ffc471535f04ce6a46794f85114ef827cea6806509dd8559b474337d55ab9b94e96e45c19a"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/pages?filters[slug][$eq]=careers&populate[0]=banner,banner.image&populate[1]=section&populate[2]=section.Listing&populate[3]=section.Listing.thumb&populate[4]=section.Listing.media",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"pages"
+							],
+							"query": [
+								{
+									"key": "filters[slug][$eq]",
+									"value": "careers"
+								},
+								{
+									"key": "populate[0]",
+									"value": "banner,banner.image"
+								},
+								{
+									"key": "populate[1]",
+									"value": "section"
+								},
+								{
+									"key": "populate[2]",
+									"value": "section.Listing"
+								},
+								{
+									"key": "populate[3]",
+									"value": "section.Listing.thumb"
+								},
+								{
+									"key": "populate[4]",
+									"value": "section.Listing.media"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "footer",
+					"id": "2aa2bec9-b17e-4746-9851-dab5eacec51d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "main-menu",
+					"id": "dd649a6a-7a80-4fed-b30d-04f1f3d6d83b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-categories?populate=*",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-categories"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "page",
+					"id": "6a93136f-f0e8-4514-8775-5439a5ab03d9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}api/pages/page_investors"
+					},
+					"response": []
+				}
+			],
+			"id": "dab6d9dd-3f53-44db-ae47-049c7e9920f6"
+		},
+		{
+			"name": "enquery",
+			"item": [
+				{
+					"name": "enquery",
+					"id": "0f87fa3e-6e62-468d-8362-c02056148771",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "44880a18c1dc5e3faece06ac0cc808baace8c6dcee888776ad438100288a89ae3bfc99676fbdef3d01029aa7d39c433de158be79010c219b54e69288c6f59f2613b7ec2ff0f346f619b244add3947e525e7ba78a86b0e3571fe6d011b772006e1e9702f873591b52aee00eb1efae8c674e3db0cd4ced2fc9d3bca9f22370f46c"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"Name\": \"Hello\",\r\n    \"Email\": \"fafafafa@gmail.com\",\r\n    \"Number\": \"90139afa59321\",\r\n    \"Message\":\"kjkljk\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}api/enquiries"
+					},
+					"response": []
+				},
+				{
+					"name": "upload",
+					"id": "3c005a0a-7864-4f5f-8f01-715d65a270e1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "40a7e4b35936fb4515499ca1dd09a19866015905f14df1500849497c17928a45ecc5cd37d5ba842ff06bec6a4bcc18cb0ac8fb4b2d3a25c3e0d09c99c1c4aec99568c9f70f9fa62abfe4647d922db39ad86eb779ceeb3db03444f5260c2a686b4925f72dcef1124ef323d0133a424d33d41a34bbb9b5da4400fb81cdb8521f6b"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"type": "file",
+									"src": "postman-cloud:///1ef59778-1c69-4470-8b62-4fe03c728c4e"
+								},
+								{
+									"key": "folder",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:3009/upload"
+					},
+					"response": []
+				},
+				{
+					"name": "job-applies",
+					"id": "35ab5d71-4553-4c04-9acc-8c8a456f00f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "e3eeb374fc576c86c35912a0430d30cdb21e9cca7a0d047797c4f1569d358c1ee6b7283cf888ef31d2c652ebbe56f8c68f75e2a5ae5058628f8a9de1664e1cfcf45797e536ae59b09bb6da8f7259bc7b09bff745c8a98e5944f98af3ad5c31201fda9ba9aaa50259927538c3e3843613b880ad02b4b0d28aef4d060bb546ceca"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Email",
+									"value": "fsf@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Mobile",
+									"value": "8966265845",
+									"type": "text"
+								},
+								{
+									"key": "Last_Employment_Details",
+									"value": "hellow world",
+									"type": "text"
+								},
+								{
+									"key": "Willing_to_Relocate",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Previous_company",
+									"value": "jio",
+									"type": "text"
+								},
+								{
+									"key": "Key_Skills",
+									"value": "react",
+									"type": "text"
+								},
+								{
+									"key": "Education",
+									"value": "b.tech",
+									"type": "text"
+								},
+								{
+									"key": "CTC",
+									"value": "50.23",
+									"type": "text"
+								},
+								{
+									"key": "Notice_Period",
+									"value": "\"6\"",
+									"type": "text"
+								},
+								{
+									"key": "Total_Experience",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "resume",
+									"type": "file",
+									"src": "postman-cloud:///1ef69ddb-4c4c-4ce0-82b6-85b87eef9387"
+								}
+							]
+						},
+						"url": "{{URL}}api/job-applies"
+					},
+					"response": []
+				}
+			],
+			"id": "4e4f64f8-ab05-4bfb-95ae-7c2662f10d16"
+		}
+	]
+}
