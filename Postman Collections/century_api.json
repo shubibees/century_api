@@ -110,7 +110,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/product-categories?filters[slug][$eq]=blockboards&populate[products]=*&populate[0]=products.product_priceing",
+							"raw": "{{URL}}api/product-categories?filters[slug][$eq]=blockboards&populate[0]=products.product_priceing&populate[1]=products.Multiple_Image",
 							"host": [
 								"{{URL}}api"
 							],
@@ -123,12 +123,12 @@
 									"value": "blockboards"
 								},
 								{
-									"key": "populate[products]",
-									"value": "*"
-								},
-								{
 									"key": "populate[0]",
 									"value": "products.product_priceing"
+								},
+								{
+									"key": "populate[1]",
+									"value": "products.Multiple_Image"
 								}
 							]
 						}
