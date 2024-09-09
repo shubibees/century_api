@@ -9,6 +9,24 @@
 			"name": "product",
 			"item": [
 				{
+					"name": "eshop",
+					"item": [
+						{
+							"name": "get_category",
+							"id": "1ddc81d7-3125-4195-806d-abf7e7efd74b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
+					"id": "9addebaa-0a5c-475b-9d84-6b85bc5fff42"
+				},
+				{
 					"name": "get_category",
 					"id": "2d4d2653-f3a0-498e-8dae-3bd21c04cbe5",
 					"protocolProfileBehavior": {
