@@ -74,7 +74,26 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-priceings?populate[0]=productpagination[page]=10&pagination[pageSize]=10",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-priceings"
+							],
+							"query": [
+								{
+									"key": "populate[0]",
+									"value": "productpagination[page]=10"
+								},
+								{
+									"key": "pagination[pageSize]",
+									"value": "10"
+								}
+							]
+						}
 					},
 					"response": []
 				}
