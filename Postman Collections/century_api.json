@@ -101,7 +101,7 @@
 					"response": []
 				},
 				{
-					"name": "category_products",
+					"name": "category_products_not_working",
 					"id": "0fe7ad8e-2262-44a8-bad3-efde9d9848df",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
