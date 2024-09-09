@@ -36,7 +36,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "category_products",
 					"id": "0fe7ad8e-2262-44a8-bad3-efde9d9848df",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
