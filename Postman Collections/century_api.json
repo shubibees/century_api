@@ -51,7 +51,26 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-categories?filters[slug][$eq]=blockboards&populate[products]=*",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-categories"
+							],
+							"query": [
+								{
+									"key": "filters[slug][$eq]",
+									"value": "blockboards"
+								},
+								{
+									"key": "populate[products]",
+									"value": "*"
+								}
+							]
+						}
 					},
 					"response": []
 				}
