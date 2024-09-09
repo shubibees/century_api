@@ -65,6 +65,18 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "product_with_pricing",
+					"id": "7e8e9d70-c0a6-4e11-a25d-5b12a859bae7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "c3cec88f-9455-465f-860d-2c87f09b3bdc"
