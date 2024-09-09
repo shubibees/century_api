@@ -88,7 +88,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/product-priceings?populate[0]=productpagination[page]=10&pagination[pageSize]=10",
+							"raw": "{{URL}}api/product-priceings?populate[0]=productpagination[page]=10&populate[1]=product&pagination[pageSize]=10",
 							"host": [
 								"{{URL}}api"
 							],
@@ -99,6 +99,10 @@
 								{
 									"key": "populate[0]",
 									"value": "productpagination[page]=10"
+								},
+								{
+									"key": "populate[1]",
+									"value": "product"
 								},
 								{
 									"key": "pagination[pageSize]",
@@ -141,6 +145,18 @@
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "product_filter_by_location",
+					"id": "52b22936-1b7d-4beb-bf38-444a4d3e3452",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
