@@ -19,6 +19,45 @@
 							},
 							"request": {
 								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/product-categories?filters[slug][$eq]=doors&filters[products][display_on_eshop][$eq]=true&populate[products]=*&populate[products.product_priceing]=*",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"product-categories"
+									],
+									"query": [
+										{
+											"key": "filters[slug][$eq]",
+											"value": "doors"
+										},
+										{
+											"key": "filters[products][display_on_eshop][$eq]",
+											"value": "true"
+										},
+										{
+											"key": "populate[products]",
+											"value": "*"
+										},
+										{
+											"key": "populate[products.product_priceing]",
+											"value": "*"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "accf7973-56bd-4687-b60d-4692b8c1bae6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
 								"header": []
 							},
 							"response": []
