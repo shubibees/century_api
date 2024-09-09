@@ -45,7 +45,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/product-categories?filters[slug][$eq]=blockboards&populate[products]=*",
+							"raw": "{{URL}}api/product-categories?filters[slug][$eq]=blockboards&populate[products]=*&populate[products.product_priceing]=*",
 							"host": [
 								"{{URL}}api"
 							],
@@ -59,6 +59,10 @@
 								},
 								{
 									"key": "populate[products]",
+									"value": "*"
+								},
+								{
+									"key": "populate[products.product_priceing]",
 									"value": "*"
 								}
 							]
