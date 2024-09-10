@@ -492,7 +492,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "1a332108a2797f157e64c8847b671641eb3730ea8c2fa23238704cdb64fff92e94f3a5d9dcd84ea2fdfe6f5df45c27632720defc9f979ddb0f8bb7e0b7ca33cc7028b707c0a89271e2660143ea1514111e7d7be98fc176b38e6a16ffc471535f04ce6a46794f85114ef827cea6806509dd8559b474337d55ab9b94e96e45c19a"
+								"token": "{{ENTERY_TOKEN}}"
 							}
 						},
 						"method": "GET",
