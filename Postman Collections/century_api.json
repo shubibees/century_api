@@ -110,7 +110,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/product-categories?filters[level][$eq]=1&populate=children_category&populate=children_category.children_category",
+							"raw": "{{URL}}api/product-categories?filters[level][$eq]=1&populate=children_category",
 							"host": [
 								"{{URL}}api"
 							],
@@ -125,10 +125,6 @@
 								{
 									"key": "populate",
 									"value": "children_category"
-								},
-								{
-									"key": "populate",
-									"value": "children_category.children_category"
 								}
 							]
 						}
