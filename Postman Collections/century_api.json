@@ -286,6 +286,12 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
