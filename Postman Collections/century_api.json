@@ -341,7 +341,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "product_deatail",
 					"id": "4b5ad40c-585d-43af-8f2a-2c35b6bb2319",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
