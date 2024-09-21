@@ -255,6 +255,12 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -349,7 +355,21 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{URL}}api/products"
+						"url": {
+							"raw": "{{URL}}api/products?populate[product_priceings]=*",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "populate[product_priceings]",
+									"value": "*"
+								}
+							]
+						}
 					},
 					"response": []
 				}
