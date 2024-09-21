@@ -356,7 +356,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/products?populate[product_priceings]=*",
+							"raw": "{{URL}}api/products?populate[0]=seo&populate[1]=product_priceings&populate[2]=product_priceings.location_state",
 							"host": [
 								"{{URL}}api"
 							],
@@ -365,8 +365,16 @@
 							],
 							"query": [
 								{
-									"key": "populate[product_priceings]",
-									"value": "*"
+									"key": "populate[0]",
+									"value": "seo"
+								},
+								{
+									"key": "populate[1]",
+									"value": "product_priceings"
+								},
+								{
+									"key": "populate[2]",
+									"value": "product_priceings.location_state"
 								}
 							]
 						}
