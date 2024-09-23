@@ -380,6 +380,18 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "api/main-menu?populate[menu_items][populate][sub_menu_items]=*",
+					"id": "404fb643-1ef4-49b3-96bc-70755f5bbcd2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "c3cec88f-9455-465f-860d-2c87f09b3bdc"
