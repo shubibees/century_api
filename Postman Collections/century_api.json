@@ -388,8 +388,29 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/main-menu?populate[menu_items][populate][sub_menu_items]=*",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"main-menu"
+							],
+							"query": [
+								{
+									"key": "populate[menu_items][populate][sub_menu_items]",
+									"value": "*"
+								}
+							]
+						}
 					},
 					"response": []
 				}
