@@ -356,7 +356,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/products?populate[0]=seo&populate[1]=product_priceings&populate[2]=product_priceings.location_state",
+							"raw": "{{URL}}api/products?filters[product_priceings][location_state][state][$eq]=Delhi&populate[0]=seo&populate[1]=product_priceings&populate[2]=product_priceings.location_state",
 							"host": [
 								"{{URL}}api"
 							],
@@ -364,6 +364,10 @@
 								"products"
 							],
 							"query": [
+								{
+									"key": "filters[product_priceings][location_state][state][$eq]",
+									"value": "Delhi"
+								},
 								{
 									"key": "populate[0]",
 									"value": "seo"
