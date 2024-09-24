@@ -348,15 +348,86 @@
 				},
 				{
 					"name": "product_deatail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ec9f69f5-8ae0-4b55-bacc-02b83675fd08",
+								"exec": [
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+									"    .tftable tr {background-color:#ffffff;}\r",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+									"    .tftable tr:hover {background-color:#e0ffff;}\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"tftable\" border=\"1\">\r",
+									"    <tr>\r",
+									"        <th>ID</th>\r",
+									"        <th>Description</th>\r",
+									"        <th>Created At</th>\r",
+									"        <th>Updated At</th>\r",
+									"        <th>Published At</th>\r",
+									"        <th>Display on Eshop</th>\r",
+									"        <th>Alias</th>\r",
+									"        <th>Width</th>\r",
+									"        <th>Height</th>\r",
+									"        <th>Tickness</th>\r",
+									"        <th>Price</th>\r",
+									"        <th>Latitude</th>\r",
+									"        <th>Longitude</th>\r",
+									"        <th>State</th>\r",
+									"    </tr>\r",
+									"    \r",
+									"    {{#each response.data}}\r",
+									"        <tr id=row_{{@key}}>\r",
+									"            <td>{{id}}</td>\r",
+									"            <td>{{attributes.Description}}</td>\r",
+									"            <td>{{attributes.createdAt}}</td>\r",
+									"            <td>{{attributes.updatedAt}}</td>\r",
+									"            <td>{{attributes.publishedAt}}</td>\r",
+									"            <td>{{attributes.display_on_eshop}}</td>\r",
+									"            <td>{{attributes.alias}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.width}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.height}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.tickness}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.price}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.location_state.data.attributes.latitude}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.location_state.data.attributes.longitude}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.location_state.data.attributes.state}}</td>\r",
+									"        </tr>\r",
+									"    {{/each}}\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    return {response: pm.response.json()}\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "4b5ad40c-585d-43af-8f2a-2c35b6bb2319",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/products?filters[product_priceings][location_state][state][$eq]=Delhi&populate[0]=seo&populate[1]=product_priceings&populate[2]=product_priceings.location_state",
+							"raw": "{{URL}}api/products?filters[product_priceings][location_state][state][$eq]=Delhi&populate[0]=seo&populate[1]=product_priceings&populate[2]=product_priceings.location_state&populate[3]=product_categories",
 							"host": [
 								"{{URL}}api"
 							],
@@ -379,6 +450,10 @@
 								{
 									"key": "populate[2]",
 									"value": "product_priceings.location_state"
+								},
+								{
+									"key": "populate[3]",
+									"value": "product_categories"
 								}
 							]
 						}
@@ -625,7 +700,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/pages?filters[slug][$eq]=careers&populate[0]=banner,banner.image&populate[1]=section&populate[2]=section.Listing&populate[3]=section.Listing.thumb&populate[4]=section.Listing.media",
+							"raw": "{{URL}}api/pages?filters[Slug][$eq]=careers&populate[0]=Banner,Banner.Image&populate[1]=section&populate[2]=section.Listing&populate[3]=section.Listing.thumb&populate[4]=section.Listing.media",
 							"host": [
 								"{{URL}}api"
 							],
@@ -634,12 +709,12 @@
 							],
 							"query": [
 								{
-									"key": "filters[slug][$eq]",
+									"key": "filters[Slug][$eq]",
 									"value": "careers"
 								},
 								{
 									"key": "populate[0]",
-									"value": "banner,banner.image"
+									"value": "Banner,Banner.Image"
 								},
 								{
 									"key": "populate[1]",
