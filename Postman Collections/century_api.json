@@ -427,7 +427,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/products?filters[product_priceings][width][$eq]=24401220&populate[0]=seo&populate[1]=product_priceings&populate[2]=product_priceings.location_state&populate[3]=product_categories",
+							"raw": "{{URL}}api/products?filters[product_priceings][location_state][state][$eq]=Punjab&populate[0]=seo&populate[1]=product_priceings&populate[2]=product_priceings.location_state&populate[3]=product_categories",
 							"host": [
 								"{{URL}}api"
 							],
@@ -436,8 +436,14 @@
 							],
 							"query": [
 								{
-									"key": "filters[product_priceings][width][$eq]",
-									"value": "24401220"
+									"key": "filters[product_priceings][location_state][state][$eq]",
+									"value": "Punjab"
+								},
+								{
+									"key": "filters[product_categories][slug][$eq]",
+									"value": "silk-tuff",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "populate[0]",
