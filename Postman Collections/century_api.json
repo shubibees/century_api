@@ -644,6 +644,18 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "search",
+					"id": "873cf217-cf84-4099-83d0-5b48a83018a1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "f8c42bea-ed8a-4983-b351-e1445da8997e"
