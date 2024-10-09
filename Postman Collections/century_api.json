@@ -515,7 +515,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "503fb9b6d3e9f2afc05742d7f5efd618c14ae5f233411f9394360b1719a3c3e20d9064e18cf6ecc67f43ec4e5df5422bee1859d249c94c59c3e934d23952cbbacc2f79574c26fdc56b9d6f99c2ff17e2f4a63e1fb61f2924df183a47d12ef698579b12c38319d2faf7de35e33f3b2591b5e968534fab8def50d2bb8635c32317"
+								"token": "{{ENTERY_TOKEN}}"
 							}
 						},
 						"method": "GET",
@@ -652,8 +652,30 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/blogs/search?s=\"laminate\"",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"blogs",
+								"search"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "\"laminate\""
+								}
+							]
+						}
 					},
 					"response": []
 				}
