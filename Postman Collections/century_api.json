@@ -987,6 +987,18 @@
 				}
 			],
 			"id": "4e4f64f8-ab05-4bfb-95ae-7c2662f10d16"
+		},
+		{
+			"name": "global-search",
+			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
