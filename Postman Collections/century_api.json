@@ -597,7 +597,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "503fb9b6d3e9f2afc05742d7f5efd618c14ae5f233411f9394360b1719a3c3e20d9064e18cf6ecc67f43ec4e5df5422bee1859d249c94c59c3e934d23952cbbacc2f79574c26fdc56b9d6f99c2ff17e2f4a63e1fb61f2924df183a47d12ef698579b12c38319d2faf7de35e33f3b2591b5e968534fab8def50d2bb8635c32317"
+								"token": "{}"
 							}
 						},
 						"method": "GET",
@@ -989,14 +989,55 @@
 			"id": "4e4f64f8-ab05-4bfb-95ae-7c2662f10d16"
 		},
 		{
+			"name": "Ecommerce",
+			"item": [
+				{
+					"name": "user Registration",
+					"id": "44c7f8ed-c715-48f9-a393-3eedbce55be8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}api/auth/local/register"
+					},
+					"response": []
+				}
+			],
+			"id": "2c83d9d4-48dd-4d3c-a2b9-acfa6e8ede71"
+		},
+		{
 			"name": "global-search",
 			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/global-search?search=Century Ply brings to you Extremely Durable&state=Delhi",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"global-search"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Century Ply brings to you Extremely Durable"
+						},
+						{
+							"key": "state",
+							"value": "Delhi"
+						}
+					]
+				}
 			},
 			"response": []
 		}
