@@ -854,7 +854,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "44880a18c1dc5e3faece06ac0cc808baace8c6dcee888776ad438100288a89ae3bfc99676fbdef3d01029aa7d39c433de158be79010c219b54e69288c6f59f2613b7ec2ff0f346f619b244add3947e525e7ba78a86b0e3571fe6d011b772006e1e9702f873591b52aee00eb1efae8c674e3db0cd4ced2fc9d3bca9f22370f46c"
+								"token": "{{PUSH_DATA}}"
 							}
 						},
 						"method": "POST",
