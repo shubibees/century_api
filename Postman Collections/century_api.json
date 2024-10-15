@@ -1018,6 +1018,18 @@
 						"url": "{{URL}}api/auth/local/register"
 					},
 					"response": []
+				},
+				{
+					"name": "user login",
+					"id": "e173ed2a-141e-41bd-90be-f75ffef964cf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "2c83d9d4-48dd-4d3c-a2b9-acfa6e8ede71"
