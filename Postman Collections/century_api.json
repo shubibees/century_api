@@ -1001,14 +1001,14 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Ecommerce Token}}"
+								"token": "{{PUSH_DATA}}"
 							}
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"data\": {\r\n    \"Name\": \"Hello\",\r\n    \"Email\": \"fafafafa@gmail.com\",\r\n    \"Number\": \"90139afa59321\",\r\n    \"Message\":\"kjkljk\"\r\n  }\r\n}",
+							"raw": "{\r\n    \"username\": \"shubham\",\r\n    \"email\": \"shubhamibees@gmail.com\",\r\n    \"password\": \"123456789\",\r\n    \"Message\":\"kjkljk\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
