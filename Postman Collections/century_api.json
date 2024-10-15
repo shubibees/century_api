@@ -1021,6 +1021,19 @@
 				},
 				{
 					"name": "user login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "801dc330-5986-432d-9cb7-327380aadb19",
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().jwt);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "e173ed2a-141e-41bd-90be-f75ffef964cf",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
