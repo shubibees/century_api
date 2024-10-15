@@ -916,7 +916,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "e3eeb374fc576c86c35912a0430d30cdb21e9cca7a0d047797c4f1569d358c1ee6b7283cf888ef31d2c652ebbe56f8c68f75e2a5ae5058628f8a9de1664e1cfcf45797e536ae59b09bb6da8f7259bc7b09bff745c8a98e5944f98af3ad5c31201fda9ba9aaa50259927538c3e3843613b880ad02b4b0d28aef4d060bb546ceca"
+								"token": "{{PUSH_DATA}}"
 							}
 						},
 						"method": "POST",
@@ -926,7 +926,7 @@
 							"formdata": [
 								{
 									"key": "Email",
-									"value": "fsf@gmail.com",
+									"value": "opopop@gmail.com",
 									"type": "text"
 								},
 								{
