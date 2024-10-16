@@ -1067,8 +1067,15 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{JWT}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{URL}}api/cart"
 					},
 					"response": []
 				}
