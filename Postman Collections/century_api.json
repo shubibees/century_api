@@ -515,7 +515,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{ENTERY_TOKEN}}"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzI5NjgzMjUwLCJleHAiOjE3Mjk3Njk2NTB9.XXcYd_JGtn84tG3VAL4MPHJPj5X1wX7MgS0glO28o-I"
 							}
 						},
 						"method": "GET",
