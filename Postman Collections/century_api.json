@@ -1092,8 +1092,33 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/testimonials?populate=*&filters[Category][$eq]=Dealers",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"testimonials"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								},
+								{
+									"key": "filters[Category][$eq]",
+									"value": "Dealers"
+								}
+							]
+						}
 					},
 					"response": []
 				}
