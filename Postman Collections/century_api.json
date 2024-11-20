@@ -1083,6 +1083,24 @@
 			"id": "2c83d9d4-48dd-4d3c-a2b9-acfa6e8ede71"
 		},
 		{
+			"name": "testimonials",
+			"item": [
+				{
+					"name": "testimonials",
+					"id": "ddbbe0b2-8fe8-49a3-bc8c-74a661ccd22b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "a7f488e0-1f5e-4162-bc01-9260c14418d3"
+		},
+		{
 			"name": "global-search",
 			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
 			"protocolProfileBehavior": {
