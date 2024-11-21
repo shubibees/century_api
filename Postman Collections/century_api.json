@@ -1075,7 +1075,16 @@
 						},
 						"method": "POST",
 						"header": [],
-						"url": "{{URL}}api/cart"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"users_permissions_user\": 3,  // Replace with the actual user ID\r\n  \"session_id\": \"<unique_session_id>\",    // Replace with a unique session ID\r\n  \"status\": \"active\",                     // Choose from \"active\", \"converted\", \"abandoned\"\r\n  \"last_activity\": \"2023-10-10T14:48:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}api/carts"
 					},
 					"response": []
 				}
