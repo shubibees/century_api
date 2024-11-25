@@ -1089,30 +1089,14 @@
 					"response": []
 				},
 				{
-					"name": "cart-items",
-					"id": "5d751245-df0e-45f0-a6b6-b21b58d695c7",
+					"name": "session",
+					"id": "a07dc4cc-3613-4351-bb05-6699d4ad55c4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{JWT}}"
-							}
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"data\": {\r\n    \"cart\": 2,\r\n    \"product_variants\": [\r\n      {\r\n        \"id\": 1358  // Replace with actual product variant IDs\r\n      },\r\n      {\r\n        \"id\": 1359\r\n      }\r\n    ],\r\n    \"quantity\": 1,  // Set the desired quantity\r\n    \"products\": [\r\n      {\r\n        \"id\": 17  // Replace with actual product IDs\r\n      },\r\n      {\r\n        \"id\": 18\r\n      }\r\n    ]\r\n  }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{URL}}api/cart-items"
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
