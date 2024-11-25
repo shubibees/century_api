@@ -1073,18 +1073,18 @@
 								"token": "{{JWT}}"
 							}
 						},
-						"method": "POST",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"data\": {\r\n    \"session_id\": \"54555-5656-43432-442366\",    // Replace with a unique session ID\r\n    \"status\": \"active\",                     // Choose from \"active\", \"converted\", \"abandoned\"\r\n    \"last_activity\": \"2023-10-10T14:48:00.000Z\",  // Use the current datetime in ISO 8601 format\r\n  }\r\n}",
+							"raw": "{\r\n  \"session_id\": \"guest-session\", \r\n  \"items\": [\r\n    {\r\n      \"product_id\": 17,\r\n      \"variant_id\": 1378, // Optional\r\n      \"quantity\": 1\r\n    },\r\n     {\r\n      \"product_id\": 18,\r\n      \"variant_id\": 1379, // Optional\r\n      \"quantity\": 4\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{URL}}api/carts"
+						"url": "{{URL}}api/carts/add"
 					},
 					"response": []
 				},
