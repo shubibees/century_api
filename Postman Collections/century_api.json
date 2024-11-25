@@ -1070,14 +1070,14 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{JWT}}"
+								"token": "{{PUSH_DATA}}"
 							}
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"session_id\": \"guest-sessiondfdfdsdde\", \r\n  \"items\": [\r\n    {\r\n      \"product_id\": 20,\r\n      \"variant_id\": 1384, // Optional\r\n      \"quantity\": 1\r\n    },\r\n     {\r\n      \"product_id\": 21,\r\n      \"variant_id\": 1385, // Optional\r\n      \"quantity\": 4\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"session_id\": \"guest-sessiondfdfdsddeee\",\r\n  \"state_id\":9,\r\n  \"city_id\":507, \r\n  \"items\": [\r\n    {\r\n      \"product_id\": 20,\r\n      \"variant_id\": 1384, // Optional\r\n      \"quantity\": 1\r\n    },\r\n     {\r\n      \"product_id\": 21,\r\n      \"variant_id\": 1385, // Optional\r\n      \"quantity\": 4\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
