@@ -1008,7 +1008,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"shubham\",\r\n    \"email\": \"shubhamibees@gmail.com\",\r\n    \"password\": \"123456789\",\r\n    \"Message\":\"kjkljk\"\r\n\r\n}",
+							"raw": "{\r\n    \"username\": \"shubhamjj\",\r\n    \"email\": \"shubhamibeesjj@gmail.com\",\r\n    \"password\": \"123456789\",\r\n    \"Message\":\"kjkljk\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1049,7 +1049,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"identifier\":\"shubham\" ,\r\n    \"password\": \"123456789\"\r\n\r\n}",
+							"raw": "{\r\n    \"identifier\":\"shubhamibeesjj@gmail.com\" ,\r\n    \"password\": \"123456789\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1077,7 +1077,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"users_permissions_user\": 3,  // Replace with the actual user ID\r\n  \"session_id\": \"<unique_session_id>\",    // Replace with a unique session ID\r\n  \"status\": \"active\",                     // Choose from \"active\", \"converted\", \"abandoned\"\r\n  \"last_activity\": \"2023-10-10T14:48:00.000Z\"\r\n}",
+							"raw": "{\r\n  \"data\": {\r\n    \"sers_permissions_user\":\"shubham\",\r\n    \"session_id\": \"34443-3434-34332-3434545\",    // Replace with a unique session ID\r\n    \"status\": \"active\",                     // Choose from \"active\", \"converted\", \"abandoned\"\r\n    \"last_activity\": \"2023-10-10T14:48:00.000Z\"  // Use the current datetime in ISO 8601 format\r\n  }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
