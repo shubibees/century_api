@@ -1077,7 +1077,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"data\": {\r\n    \"sers_permissions_user\":\"shubham\",\r\n    \"session_id\": \"34443-3434-34332-3434545\",    // Replace with a unique session ID\r\n    \"status\": \"active\",                     // Choose from \"active\", \"converted\", \"abandoned\"\r\n    \"last_activity\": \"2023-10-10T14:48:00.000Z\"  // Use the current datetime in ISO 8601 format\r\n  }\r\n}",
+							"raw": "{\r\n  \"data\": {\r\n    \"session_id\": \"54555-5656-43432-442366\",    // Replace with a unique session ID\r\n    \"status\": \"active\",                     // Choose from \"active\", \"converted\", \"abandoned\"\r\n    \"last_activity\": \"2023-10-10T14:48:00.000Z\",  // Use the current datetime in ISO 8601 format\r\n  }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1089,7 +1089,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "cart-items",
 					"id": "5d751245-df0e-45f0-a6b6-b21b58d695c7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
