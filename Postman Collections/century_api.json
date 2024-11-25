@@ -1105,7 +1105,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"data\": {\r\n    \"cart\": 5,  // Replace with the actual cart ID\r\n    \"product_variants\": [\r\n      {\r\n        \"id\": 12  // Replace with actual product variant IDs\r\n      },\r\n      {\r\n        \"id\": 13\r\n      }\r\n      // Add more product variants as needed\r\n    ],\r\n    \"quantity\": 1,  // Set the desired quantity\r\n    \"products\": [\r\n      {\r\n        \"id\": 12  // Replace with actual product IDs\r\n      },\r\n      {\r\n        \"id\": 16\r\n      }\r\n      // Add more products as needed\r\n    ]\r\n  }\r\n}",
+							"raw": "{\r\n  \"data\": {\r\n    \"cart\": 3,\r\n    \"product_variants\": [\r\n      {\r\n        \"id\": 12  // Replace with actual product variant IDs\r\n      },\r\n      {\r\n        \"id\": 13\r\n      }\r\n      // Add more product variants as needed\r\n    ],\r\n    \"quantity\": 1,  // Set the desired quantity\r\n    \"products\": [\r\n      {\r\n        \"id\": 17  // Replace with actual product IDs\r\n      },\r\n      {\r\n        \"id\": 18\r\n      }\r\n      // Add more products as needed\r\n    ]\r\n  }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
