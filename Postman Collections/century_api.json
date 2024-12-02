@@ -740,7 +740,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/pages?filters[Slug][$eq]=careers&populate[0]=Banner,Banner.Image&populate[1]=section&populate[2]=section.Listing&populate[3]=section.Listing.thumb&populate[4]=section.Listing.media",
+							"raw": "{{URL}}api/pages?filters[Slug][$eq]=careers&populate[0]=Banner,Banner.Backgrount_Image,Banner.Main_image&populate[1]=section&populate[2]=section.Listing&populate[3]=section.Listing.thumb&populate[4]=section.Listing.media",
 							"host": [
 								"{{URL}}api"
 							],
@@ -754,7 +754,7 @@
 								},
 								{
 									"key": "populate[0]",
-									"value": "Banner,Banner.Image"
+									"value": "Banner,Banner.Backgrount_Image,Banner.Main_image"
 								},
 								{
 									"key": "populate[1]",
@@ -1077,7 +1077,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"session_id\": \"guest-sessiondfdfdsddeee\",\r\n  \"state_id\":9,\r\n  \"city_id\":507, \r\n  \"items\": [\r\n    {\r\n      \"product_id\": 20,\r\n      \"variant_id\": 1384, // Optional\r\n      \"quantity\": 1\r\n    },\r\n     {\r\n      \"product_id\": 21,\r\n      \"variant_id\": 1385, // Optional\r\n      \"quantity\": 4\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"session_id\": \"guest-sesstest\",\r\n  \"state_id\":9,\r\n  \"city_id\":507, \r\n  \"items\": [\r\n    {\r\n      \"product_id\": 20,\r\n      \"variant_id\": 1384, // Optional\r\n      \"quantity\": 1\r\n    },\r\n     {\r\n      \"product_id\": 21,\r\n      \"variant_id\": 1385, // Optional\r\n      \"quantity\": 4\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
