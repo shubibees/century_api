@@ -1163,6 +1163,24 @@
 			"id": "a7f488e0-1f5e-4162-bc01-9260c14418d3"
 		},
 		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "Menu",
+					"id": "86909971-1db0-4022-8507-14e6aea1fd92",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "f8ea168a-44c1-4253-ba67-e7cb0eba9f1b"
+		},
+		{
 			"name": "global-search",
 			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
 			"protocolProfileBehavior": {
