@@ -1176,6 +1176,18 @@
 						"header": []
 					},
 					"response": []
+				},
+				{
+					"name": "menus/items",
+					"id": "95a99598-0830-4b8b-9c34-5e22715ad6c9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "f8ea168a-44c1-4253-ba67-e7cb0eba9f1b"
