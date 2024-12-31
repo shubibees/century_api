@@ -1104,7 +1104,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{PUSH_DATA}}}}"
+								"token": ""
 							}
 						},
 						"method": "POST",
