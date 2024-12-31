@@ -1,0 +1,1320 @@
+{
+	"info": {
+		"_postman_id": "f9e043fa-e3af-46b0-bea0-10d061117478",
+		"name": "strapi_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "eshop",
+					"item": [
+						{
+							"name": "get_category",
+							"id": "1ddc81d7-3125-4195-806d-abf7e7efd74b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/product-categories?filters[slug][$eq]=doors&filters[products][display_on_eshop][$eq]=true&populate[products]=*&populate[products.product_priceing]=*",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"product-categories"
+									],
+									"query": [
+										{
+											"key": "filters[slug][$eq]",
+											"value": "doors"
+										},
+										{
+											"key": "filters[products][display_on_eshop][$eq]",
+											"value": "true"
+										},
+										{
+											"key": "populate[products]",
+											"value": "*"
+										},
+										{
+											"key": "populate[products.product_priceing]",
+											"value": "*"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "accf7973-56bd-4687-b60d-4692b8c1bae6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "15be5a1a-3b57-43ea-bb5a-cc39155412f7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
+					"id": "9addebaa-0a5c-475b-9d84-6b85bc5fff42"
+				},
+				{
+					"name": "get_category",
+					"id": "2d4d2653-f3a0-498e-8dae-3bd21c04cbe5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-categories?filters[level][$eq]=1&populate=children_category&populate=children_category.children_category",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-categories"
+							],
+							"query": [
+								{
+									"key": "filters[level][$eq]",
+									"value": "1"
+								},
+								{
+									"key": "populate",
+									"value": "children_category"
+								},
+								{
+									"key": "populate",
+									"value": "children_category.children_category"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "test",
+					"id": "b182b362-5a9c-4f47-b054-80a4f2466253",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-categories?filters[level][$eq]=1&populate=children_category",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-categories"
+							],
+							"query": [
+								{
+									"key": "filters[level][$eq]",
+									"value": "1"
+								},
+								{
+									"key": "populate",
+									"value": "children_category"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category_products_not_working",
+					"id": "0fe7ad8e-2262-44a8-bad3-efde9d9848df",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-categories?filters[slug][$eq]=blockboards&populate[0]=products.product_priceing&populate[1]=products.Multiple_Image",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-categories"
+							],
+							"query": [
+								{
+									"key": "filters[slug][$eq]",
+									"value": "blockboards"
+								},
+								{
+									"key": "populate[0]",
+									"value": "products.product_priceing"
+								},
+								{
+									"key": "populate[1]",
+									"value": "products.Multiple_Image"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product_with_pricing",
+					"id": "7e8e9d70-c0a6-4e11-a25d-5b12a859bae7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-priceings?populate[0]=productpagination[page]=10&populate[1]=product&pagination[pageSize]=10",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-priceings"
+							],
+							"query": [
+								{
+									"key": "populate[0]",
+									"value": "productpagination[page]=10"
+								},
+								{
+									"key": "populate[1]",
+									"value": "product"
+								},
+								{
+									"key": "pagination[pageSize]",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}api/product-categories?filters[slug][$eq]=blockboards&populate[0]=products&populate[1]=products.product_priceing",
+					"id": "8a227eb8-c425-4bf8-8900-1901068bd801",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-categories?filters[slug][$eq]=blockboards&populate[0]=products&populate[1]=products.product_priceing",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-categories"
+							],
+							"query": [
+								{
+									"key": "filters[slug][$eq]",
+									"value": "blockboards"
+								},
+								{
+									"key": "populate[0]",
+									"value": "products"
+								},
+								{
+									"key": "populate[1]",
+									"value": "products.product_priceing"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product_filter_by_location",
+					"id": "52b22936-1b7d-4beb-bf38-444a4d3e3452",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-priceings?filters[location_state][state][$eq]=Delhi&populate[0]=product&populate[1]=location_state&pagination[page]=10&pagination[pageSize]=10",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-priceings"
+							],
+							"query": [
+								{
+									"key": "filters[location_state][state][$eq]",
+									"value": "Delhi"
+								},
+								{
+									"key": "populate[0]",
+									"value": "product"
+								},
+								{
+									"key": "populate[1]",
+									"value": "location_state"
+								},
+								{
+									"key": "pagination[page]",
+									"value": "10"
+								},
+								{
+									"key": "pagination[pageSize]",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "price_list",
+					"id": "3d80d96c-c4d7-4ecc-a317-84ef391be5c8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-priceings?filters[location_state][state][$eq]=Delhi&populate[0]=product&populate[1]=location_state&pagination[page]=10&pagination[pageSize]=10",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-priceings"
+							],
+							"query": [
+								{
+									"key": "filters[location_state][state][$eq]",
+									"value": "Delhi"
+								},
+								{
+									"key": "populate[0]",
+									"value": "product"
+								},
+								{
+									"key": "populate[1]",
+									"value": "location_state"
+								},
+								{
+									"key": "pagination[page]",
+									"value": "10"
+								},
+								{
+									"key": "pagination[pageSize]",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product_deatail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ec9f69f5-8ae0-4b55-bacc-02b83675fd08",
+								"exec": [
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+									"    .tftable tr {background-color:#ffffff;}\r",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+									"    .tftable tr:hover {background-color:#e0ffff;}\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"tftable\" border=\"1\">\r",
+									"    <tr>\r",
+									"        <th>ID</th>\r",
+									"        <th>Description</th>\r",
+									"        <th>Created At</th>\r",
+									"        <th>Updated At</th>\r",
+									"        <th>Published At</th>\r",
+									"        <th>Display on Eshop</th>\r",
+									"        <th>Alias</th>\r",
+									"        <th>Width</th>\r",
+									"        <th>Height</th>\r",
+									"        <th>Tickness</th>\r",
+									"        <th>Price</th>\r",
+									"        <th>Latitude</th>\r",
+									"        <th>Longitude</th>\r",
+									"        <th>State</th>\r",
+									"    </tr>\r",
+									"    \r",
+									"    {{#each response.data}}\r",
+									"        <tr id=row_{{@key}}>\r",
+									"            <td>{{id}}</td>\r",
+									"            <td>{{attributes.Description}}</td>\r",
+									"            <td>{{attributes.createdAt}}</td>\r",
+									"            <td>{{attributes.updatedAt}}</td>\r",
+									"            <td>{{attributes.publishedAt}}</td>\r",
+									"            <td>{{attributes.display_on_eshop}}</td>\r",
+									"            <td>{{attributes.alias}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.width}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.height}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.tickness}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.price}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.location_state.data.attributes.latitude}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.location_state.data.attributes.longitude}}</td>\r",
+									"            <td>{{attributes.product_priceings.data.0.attributes.location_state.data.attributes.state}}</td>\r",
+									"        </tr>\r",
+									"    {{/each}}\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    return {response: pm.response.json()}\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "4b5ad40c-585d-43af-8f2a-2c35b6bb2319",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/products?filters[product_priceings][location_state][state][$eq]=Punjab&populate[0]=seo&populate[1]=product_priceings&populate[2]=product_priceings.location_state&populate[3]=product_categories",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "filters[product_priceings][location_state][state][$eq]",
+									"value": "Punjab"
+								},
+								{
+									"key": "filters[product_categories][slug][$eq]",
+									"value": "silk-tuff",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "populate[0]",
+									"value": "seo"
+								},
+								{
+									"key": "populate[1]",
+									"value": "product_priceings"
+								},
+								{
+									"key": "populate[2]",
+									"value": "product_priceings.location_state"
+								},
+								{
+									"key": "populate[3]",
+									"value": "product_categories"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/main-menu?populate[menu_items][populate][sub_menu_items]=*",
+					"id": "404fb643-1ef4-49b3-96bc-70755f5bbcd2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/main-menu?populate[menu_items][populate][sub_menu_items]=*",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"main-menu"
+							],
+							"query": [
+								{
+									"key": "populate[menu_items][populate][sub_menu_items]",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "c3cec88f-9455-465f-860d-2c87f09b3bdc"
+		},
+		{
+			"name": "blogs",
+			"item": [
+				{
+					"name": "blog",
+					"id": "5c8d0ae4-1f48-472c-9774-c73e8f4a3175",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzI5NjgzMjUwLCJleHAiOjE3Mjk3Njk2NTB9.XXcYd_JGtn84tG3VAL4MPHJPj5X1wX7MgS0glO28o-I"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/blogs?populate=*&sort=published_date:desc&pagination[page]=1&pagination[pageSize]=6",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"blogs"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								},
+								{
+									"key": "sort",
+									"value": "published_date:desc"
+								},
+								{
+									"key": "pagination[page]",
+									"value": "1"
+								},
+								{
+									"key": "pagination[pageSize]",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blog_slug",
+					"id": "06184b56-9c00-4648-bc90-1e5781a19c27",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "503fb9b6d3e9f2afc05742d7f5efd618c14ae5f233411f9394360b1719a3c3e20d9064e18cf6ecc67f43ec4e5df5422bee1859d249c94c59c3e934d23952cbbacc2f79574c26fdc56b9d6f99c2ff17e2f4a63e1fb61f2924df183a47d12ef698579b12c38319d2faf7de35e33f3b2591b5e968534fab8def50d2bb8635c32317"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/blogs?populate=*&filters[blog_category][title][$eq]=Eshop",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"blogs"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								},
+								{
+									"key": "filters[blog_category][title][$eq]",
+									"value": "Eshop"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blog_category",
+					"id": "0f691039-9160-4091-afdf-cff5094c5f94",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}api/blog-categories"
+					},
+					"response": []
+				},
+				{
+					"name": "blog-home",
+					"id": "6c699438-6e77-4a88-84f3-fa6365dff4f3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "tags",
+					"id": "8d62bd47-eaee-410e-b674-89b2c553c846",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/tags?populate=*",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"tags"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"id": "873cf217-cf84-4099-83d0-5b48a83018a1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/blogs/search?s=\"laminate\"",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"blogs",
+								"search"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "\"laminate\""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "f8c42bea-ed8a-4983-b351-e1445da8997e"
+		},
+		{
+			"name": "page",
+			"item": [
+				{
+					"name": "home_page",
+					"id": "a7f555d0-a496-4bd8-99c7-61d75f1cfafb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/home?populate[banner][populate][banner]=*&populate[Ideal_tools_for]=*&populate[Shop_Now]=*&populate[Where_Innovation]=*",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"home"
+							],
+							"query": [
+								{
+									"key": "populate[banner][populate][banner]",
+									"value": "*"
+								},
+								{
+									"key": "populate[Ideal_tools_for]",
+									"value": "*"
+								},
+								{
+									"key": "populate[Shop_Now]",
+									"value": "*"
+								},
+								{
+									"key": "populate[Where_Innovation]",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_page_by_slugs",
+					"id": "d81a30de-707b-48a7-8b5b-f4a21200789c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/pages?filters[Slug][$eq]=careers&populate[0]=Banner,Banner.Backgrount_Image,Banner.Main_image&populate[1]=section&populate[2]=section.Listing&populate[3]=section.Listing.thumb&populate[4]=section.Listing.media",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"pages"
+							],
+							"query": [
+								{
+									"key": "filters[Slug][$eq]",
+									"value": "careers"
+								},
+								{
+									"key": "populate[0]",
+									"value": "Banner,Banner.Backgrount_Image,Banner.Main_image"
+								},
+								{
+									"key": "populate[1]",
+									"value": "section"
+								},
+								{
+									"key": "populate[2]",
+									"value": "section.Listing"
+								},
+								{
+									"key": "populate[3]",
+									"value": "section.Listing.thumb"
+								},
+								{
+									"key": "populate[4]",
+									"value": "section.Listing.media"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "footer",
+					"id": "2aa2bec9-b17e-4746-9851-dab5eacec51d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "main-menu",
+					"id": "dd649a6a-7a80-4fed-b30d-04f1f3d6d83b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/product-categories?populate=*",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"product-categories"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "page",
+					"id": "6a93136f-f0e8-4514-8775-5439a5ab03d9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}api/pages/page_investors"
+					},
+					"response": []
+				}
+			],
+			"id": "dab6d9dd-3f53-44db-ae47-049c7e9920f6"
+		},
+		{
+			"name": "enquery",
+			"item": [
+				{
+					"name": "enquery",
+					"id": "0f87fa3e-6e62-468d-8362-c02056148771",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{PUSH_DATA}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"Name\": \"new llo\",\r\n    \"Email\": \"fafafafa@gmail.com\",\r\n    \"Number\": \"90139afa59321\",\r\n    \"Message\":\"kjkljk\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}api/enquiries"
+					},
+					"response": []
+				},
+				{
+					"name": "upload",
+					"id": "3c005a0a-7864-4f5f-8f01-715d65a270e1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "40a7e4b35936fb4515499ca1dd09a19866015905f14df1500849497c17928a45ecc5cd37d5ba842ff06bec6a4bcc18cb0ac8fb4b2d3a25c3e0d09c99c1c4aec99568c9f70f9fa62abfe4647d922db39ad86eb779ceeb3db03444f5260c2a686b4925f72dcef1124ef323d0133a424d33d41a34bbb9b5da4400fb81cdb8521f6b"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"type": "file",
+									"src": "postman-cloud:///1ef59778-1c69-4470-8b62-4fe03c728c4e"
+								},
+								{
+									"key": "folder",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:3009/upload"
+					},
+					"response": []
+				},
+				{
+					"name": "job-applies",
+					"id": "35ab5d71-4553-4c04-9acc-8c8a456f00f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{PUSH_DATA}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Email",
+									"value": "opopop@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Mobile",
+									"value": "8966265845",
+									"type": "text"
+								},
+								{
+									"key": "Last_Employment_Details",
+									"value": "hellow world",
+									"type": "text"
+								},
+								{
+									"key": "Willing_to_Relocate",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Previous_company",
+									"value": "jio",
+									"type": "text"
+								},
+								{
+									"key": "Key_Skills",
+									"value": "react",
+									"type": "text"
+								},
+								{
+									"key": "Education",
+									"value": "b.tech",
+									"type": "text"
+								},
+								{
+									"key": "CTC",
+									"value": "50.23",
+									"type": "text"
+								},
+								{
+									"key": "Notice_Period",
+									"value": "\"6\"",
+									"type": "text"
+								},
+								{
+									"key": "Total_Experience",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "resume",
+									"type": "file",
+									"src": "postman-cloud:///1ef69ddb-4c4c-4ce0-82b6-85b87eef9387"
+								}
+							]
+						},
+						"url": "{{URL}}api/job-applies"
+					},
+					"response": []
+				}
+			],
+			"id": "4e4f64f8-ab05-4bfb-95ae-7c2662f10d16"
+		},
+		{
+			"name": "Ecommerce",
+			"item": [
+				{
+					"name": "user Registration",
+					"id": "44c7f8ed-c715-48f9-a393-3eedbce55be8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{PUSH_DATA}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"shub\",\r\n    \"email\": \"shub@gmail.com\",\r\n    \"password\": \"1234567895\",\r\n    \"Message\":\"kjkljkght\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}api/auth/local/register"
+					},
+					"response": []
+				},
+				{
+					"name": "user login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "801dc330-5986-432d-9cb7-327380aadb19",
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().jwt);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "e173ed2a-141e-41bd-90be-f75ffef964cf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{PUSH_DATA}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identifier\":\"shub@gmail.com\" ,\r\n    \"password\": \"1234567895\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}api/auth/local"
+					},
+					"response": []
+				},
+				{
+					"name": "add cart",
+					"id": "d1763db5-a980-4fae-bcc1-178fdbd2d375",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{JWT}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"session_id\": \"guest-sesstest\",\r\n  \"state_id\":9,\r\n  \"city_id\":507, \r\n  \"items\": [\r\n    {\r\n      \"product_id\": 2,\r\n      \"variant_id\": 1356, // Optional\r\n      \"quantity\": 1\r\n    },\r\n     {\r\n      \"product_id\": 2,\r\n      \"variant_id\": 1355, // Optional\r\n      \"quantity\": 4\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}api/carts/add"
+					},
+					"response": []
+				},
+				{
+					"name": "create order",
+					"id": "7529b9a1-4dc1-45c3-bfb6-5699353c6f05",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{JWT}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shipping_address\": { \r\n    \"street_address\":\"new delhi\",\r\n    \"phone\":\"9013959321\",\r\n    \"postal_code\":\"\",\r\n    \"city\":\"delhi\",\r\n    \"state\":\"fun\"\r\n   },\r\n  \"billing_address\": { \r\n    \"street_address\":\"new delhi\",\r\n    \"phone\":\"9013959321\",\r\n    \"postal_code\":\"\",\r\n    \"city\":\"delhi\",\r\n    \"state\":\"fun\"\r\n   },\r\n  \"order_items\": [\r\n    {\r\n      \"variant_id\": 1356,\r\n      \"quantity\": 2,\r\n      \"price_at_time\": 500\r\n    }\r\n  ],\r\n  \"subtotal\": 1000,\r\n  \"shipping_cost\": 50,\r\n  \"discount_amount\": 0,\r\n  \"total\": 1050\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}api/orders/create"
+					},
+					"response": []
+				}
+			],
+			"id": "2c83d9d4-48dd-4d3c-a2b9-acfa6e8ede71"
+		},
+		{
+			"name": "testimonials",
+			"item": [
+				{
+					"name": "testimonials",
+					"id": "ddbbe0b2-8fe8-49a3-bc8c-74a661ccd22b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/testimonials?populate=*&filters[Category][$eq]=Dealers",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"testimonials"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								},
+								{
+									"key": "filters[Category][$eq]",
+									"value": "Dealers"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "a7f488e0-1f5e-4162-bc01-9260c14418d3"
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "Menu",
+					"id": "86909971-1db0-4022-8507-14e6aea1fd92",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}api/menus"
+					},
+					"response": []
+				},
+				{
+					"name": "menus/items",
+					"id": "95a99598-0830-4b8b-9c34-5e22715ad6c9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/menus/1?nested&populate=*",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"menus",
+								"1"
+							],
+							"query": [
+								{
+									"key": "nested",
+									"value": null
+								},
+								{
+									"key": "populate",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "f8ea168a-44c1-4253-ba67-e7cb0eba9f1b"
+		},
+		{
+			"name": "global-search",
+			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/global-search?search=Century Ply brings to you Extremely Durable&state=Delhi",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"global-search"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Century Ply brings to you Extremely Durable"
+						},
+						{
+							"key": "state",
+							"value": "Delhi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testomanial",
+			"id": "7ef09018-dcb2-412a-af38-81ca6d5eca37",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{URL}}api/testimonials/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "certificate",
+			"id": "9e82be30-731e-461d-b7ff-580014db6235",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/certificates?populate[1]=Media,Icon&populate[2]=Tabs.Logs&populate[3]=Tabs.Logs.Icon",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"certificates"
+					],
+					"query": [
+						{
+							"key": "populate[1]",
+							"value": "Media,Icon"
+						},
+						{
+							"key": "populate[2]",
+							"value": "Tabs.Logs"
+						},
+						{
+							"key": "populate[3]",
+							"value": "Tabs.Logs.Icon"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
