@@ -1014,7 +1014,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"shub\",\r\n    \"email\": \"shub@gmail.com\",\r\n    \"password\": \"1234567895\",\r\n    \"Message\":\"kjkljkght\"\r\n\r\n}",
+							"raw": "{\r\n    \"username\": \"shubkp\",\r\n    \"email\": \"shubkp@gmail.com\",\r\n    \"password\": \"1234567895\",\r\n    \"Message\":\"kjkljkght\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1055,7 +1055,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"identifier\":\"shub@gmail.com\" ,\r\n    \"password\": \"1234567895\"\r\n\r\n}",
+							"raw": "{\r\n    \"identifier\":\"shubkp@gmail.com\" ,\r\n    \"password\": \"1234567895\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
