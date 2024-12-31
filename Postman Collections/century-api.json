@@ -1076,14 +1076,14 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{JWT}}"
+								"token": ""
 							}
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"state_id\":9,\r\n  \"city_id\":507,\r\n  \"items\": [\r\n    {\r\n      \"product_id\": 2,\r\n      \"variant_id\": 1356, // Optional\r\n      \"quantity\": 1\r\n    },\r\n     {\r\n      \"product_id\": 2,\r\n      \"variant_id\": 1355, // Optional\r\n      \"quantity\": 5\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"jwt\":\"{{JWT}}\",\r\n  \"state_id\":9,\r\n  \"city_id\":507,\r\n  \"items\": [\r\n    {\r\n      \"product_id\": 2,\r\n      \"variant_id\": 1356, // Optional\r\n      \"quantity\": 1\r\n    },\r\n     {\r\n      \"product_id\": 2,\r\n      \"variant_id\": 1355, // Optional\r\n      \"quantity\": 5\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
