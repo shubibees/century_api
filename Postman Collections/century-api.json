@@ -1095,6 +1095,28 @@
 					"response": []
 				},
 				{
+					"name": "add cart(if user not exit)",
+					"id": "3a90a27e-c589-4ded-ac6e-42dc6ea0c287",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"session_id\": \"new-sesstest\",\r\n  \"state_id\":9,\r\n  \"city_id\":507,\r\n  \"items\": [\r\n    {\r\n      \"product_id\": 2,\r\n      \"variant_id\": 1356, // Optional\r\n      \"quantity\": 1\r\n    },\r\n     {\r\n      \"product_id\": 2,\r\n      \"variant_id\": 1355, // Optional\r\n      \"quantity\": 4\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}api/carts/add"
+					},
+					"response": []
+				},
+				{
 					"name": "create order",
 					"id": "7529b9a1-4dc1-45c3-bfb6-5699353c6f05",
 					"protocolProfileBehavior": {
@@ -1146,18 +1168,6 @@
 								}
 							]
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "New Request",
-					"id": "3a90a27e-c589-4ded-ac6e-42dc6ea0c287",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
 					},
 					"response": []
 				}
