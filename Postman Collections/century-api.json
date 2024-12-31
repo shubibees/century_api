@@ -1157,24 +1157,12 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "{{URL}}api/carts/fetch?session_id=newtest-sesstest",
-							"host": [
-								"{{URL}}api"
-							],
-							"path": [
-								"carts",
-								"fetch"
-							],
-							"query": [
-								{
-									"key": "session_id",
-									"value": "newtest-sesstest"
-								}
-							]
-						}
+						"url": "{{URL}}api/carts"
 					},
 					"response": []
 				}
