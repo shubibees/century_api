@@ -119,24 +119,46 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/product-categories?filters[level][$eq]=1&populate=children_category",
+							"raw": "{{URL}}api/products?filters[id][$in][0]=1&filters[id][$in][1]=2&filters[id][$in][2]=3&filters[id][$in][3]=4&filters[id][$in][4]=5&filters[id][$in][5]=6",
 							"host": [
 								"{{URL}}api"
 							],
 							"path": [
-								"product-categories"
+								"products"
 							],
 							"query": [
 								{
-									"key": "filters[level][$eq]",
+									"key": "filters[id][$in][0]",
 									"value": "1"
 								},
 								{
-									"key": "populate",
-									"value": "children_category"
+									"key": "filters[id][$in][1]",
+									"value": "2"
+								},
+								{
+									"key": "filters[id][$in][2]",
+									"value": "3"
+								},
+								{
+									"key": "filters[id][$in][3]",
+									"value": "4"
+								},
+								{
+									"key": "filters[id][$in][4]",
+									"value": "5"
+								},
+								{
+									"key": "filters[id][$in][5]",
+									"value": "6"
 								}
 							]
 						}
