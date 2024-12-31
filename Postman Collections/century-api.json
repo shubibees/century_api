@@ -1014,7 +1014,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"shubkp\",\r\n    \"email\": \"shubkp@gmail.com\",\r\n    \"password\": \"1234567895\",\r\n    \"Message\":\"kjkljkght\"\r\n\r\n}",
+							"raw": "{\r\n    \"username\": \"shubkp\",\r\n    \"email\": \"shubkp@gmail.com\",\r\n    \"password\": \"1234567895\",\r\n    \"Message\":\"kjkljkght\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
