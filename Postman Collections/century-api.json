@@ -1067,7 +1067,7 @@
 					"response": []
 				},
 				{
-					"name": "add cart",
+					"name": "add cart(if user exit)",
 					"id": "d1763db5-a980-4fae-bcc1-178fdbd2d375",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1119,6 +1119,45 @@
 							}
 						},
 						"url": "{{URL}}api/orders/create"
+					},
+					"response": []
+				},
+				{
+					"name": "fetch-cart",
+					"id": "976617fc-94dd-4d2b-8497-6e3c40a710e4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/cart?session_id=<session_id>",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"cart"
+							],
+							"query": [
+								{
+									"key": "session_id",
+									"value": "<session_id>"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "3a90a27e-c589-4ded-ac6e-42dc6ea0c287",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
