@@ -1160,17 +1160,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/cart?session_id=<session_id>",
+							"raw": "{{URL}}api/carts/fetch?session_id=newtest-sesstest",
 							"host": [
 								"{{URL}}api"
 							],
 							"path": [
-								"cart"
+								"carts",
+								"fetch"
 							],
 							"query": [
 								{
 									"key": "session_id",
-									"value": "<session_id>"
+									"value": "newtest-sesstest"
 								}
 							]
 						}
