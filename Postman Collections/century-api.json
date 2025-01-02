@@ -1187,6 +1187,18 @@
 						"url": "{{URL}}api/carts"
 					},
 					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "b34a9c68-c4a4-466e-a942-ec3ec78b8067",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "2c83d9d4-48dd-4d3c-a2b9-acfa6e8ede71"
