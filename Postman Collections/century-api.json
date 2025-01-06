@@ -1393,6 +1393,18 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "reset-password",
+			"id": "68f833a9-a9c6-4268-9ce9-531e7df7a157",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
