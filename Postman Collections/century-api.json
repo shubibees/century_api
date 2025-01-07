@@ -1310,6 +1310,24 @@
 			"id": "f8ea168a-44c1-4253-ba67-e7cb0eba9f1b"
 		},
 		{
+			"name": "login-logic",
+			"item": [
+				{
+					"name": "password-reset",
+					"id": "2d16580f-ad3f-4f25-9704-59546831ccd5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "d163454c-3c67-4717-8184-a3ddfee9a5cb"
+		},
+		{
 			"name": "global-search",
 			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
 			"protocolProfileBehavior": {
