@@ -865,6 +865,18 @@
 						"url": "{{URL}}api/pages/page_investors"
 					},
 					"response": []
+				},
+				{
+					"name": "filter by module",
+					"id": "330463fc-ef22-4873-ab29-bffda2f90570",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "dab6d9dd-3f53-44db-ae47-049c7e9920f6"
