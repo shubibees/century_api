@@ -73,6 +73,19 @@
 								"header": []
 							},
 							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "0e121c40-05c3-494b-b9b5-cfeaa2d0f17e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{URL}}api/product-categories/et657xzh088ery7arvjun0qk"
+							},
+							"response": []
 						}
 					],
 					"id": "9addebaa-0a5c-475b-9d84-6b85bc5fff42"
