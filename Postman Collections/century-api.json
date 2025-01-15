@@ -1058,29 +1058,39 @@
 			"item": [
 				{
 					"name": "user Registration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "74c57b42-1ffe-453c-9703-b5d35c376b56",
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().jwt);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "44c7f8ed-c715-48f9-a393-3eedbce55be8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{PUSH_DATA}}"
-							}
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"shubkp\",\r\n    \"email\": \"shubkp@gmail.com\",\r\n    \"password\": \"1234567895\",\r\n    \"Message\":\"kjkljkght\"\r\n}",
+							"raw": "{\r\n    \"name\":\"shubham\",\r\n    \"username\": \"shubkpp\",\r\n    \"email\": \"shubkpp@gmail.com\",\r\n    \"password\": \"1234567895\",\r\n    \"phone\":\"8766285154\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{URL}}api/auth/local/register"
+						"url": "{{URL}}/api/auth/local/register"
 					},
 					"response": []
 				},
@@ -1107,21 +1117,21 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{PUSH_DATA}}"
+								"token": "{{JWT}}"
 							}
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"identifier\":\"shubkp@gmail.com\" ,\r\n    \"password\": \"1234567895\"\r\n\r\n}",
+							"raw": "{\r\n    \"identifier\":\"shubkpp@gmail.com\" ,\r\n    \"password\": \"1234567895\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{URL}}api/auth/local"
+						"url": "{{URL}}/api/auth/local"
 					},
 					"response": []
 				},
