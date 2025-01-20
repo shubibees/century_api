@@ -1436,6 +1436,34 @@
 			"id": "d163454c-3c67-4717-8184-a3ddfee9a5cb"
 		},
 		{
+			"name": "faqs",
+			"item": [
+				{
+					"name": "faq",
+					"id": "799f16f5-045a-42a1-9b8a-8806f775debe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"category\": \"General Queries\",\r\n    \"question\": \"string\",\r\n    \"answer\": \"string\",\r\n    \"order\": 0\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{URL}}/api/faqs"
+					},
+					"response": []
+				}
+			],
+			"id": "48dd3a75-2232-4463-a9ec-b52fede31800"
+		},
+		{
 			"name": "global-search",
 			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
 			"protocolProfileBehavior": {
