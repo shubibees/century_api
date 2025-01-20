@@ -1320,6 +1320,19 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "3f029679-c900-4a45-be8e-13157106d186",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL}}/api/testimonials/categories"
+					},
+					"response": []
 				}
 			],
 			"id": "a7f488e0-1f5e-4162-bc01-9260c14418d3"
