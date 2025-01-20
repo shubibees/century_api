@@ -1464,6 +1464,24 @@
 			"id": "48dd3a75-2232-4463-a9ec-b52fede31800"
 		},
 		{
+			"name": "invistor",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "d29a706b-f1ab-49b7-800b-6c74a1b72171",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "94b2f448-401e-496d-a1b9-35baea448fb6"
+		},
+		{
 			"name": "global-search",
 			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
 			"protocolProfileBehavior": {
