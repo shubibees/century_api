@@ -1531,8 +1531,21 @@
 			"id": "eddb8670-ef01-47a6-84f8-95f4312b4c91"
 		},
 		{
-			"name": "New Folder",
-			"item": [],
+			"name": "certificate",
+			"item": [
+				{
+					"name": "certificate",
+					"id": "54b5df34-5cb9-40e2-ac39-bd27b2b7c156",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "f92bcc40-261b-418d-a50b-be2836725980"
 		},
 		{
