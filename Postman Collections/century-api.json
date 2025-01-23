@@ -1531,6 +1531,11 @@
 			"id": "eddb8670-ef01-47a6-84f8-95f4312b4c91"
 		},
 		{
+			"name": "New Folder",
+			"item": [],
+			"id": "f92bcc40-261b-418d-a50b-be2836725980"
+		},
+		{
 			"name": "global-search",
 			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
 			"protocolProfileBehavior": {
@@ -1737,6 +1742,18 @@
 						}
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "d2f7df38-6f23-432b-b1ee-f6b983e5bbd7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
