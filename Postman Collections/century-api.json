@@ -1496,6 +1496,18 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "folder_data",
+					"id": "82b3ae85-7748-4b07-9923-dfff3be1fa14",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "94b2f448-401e-496d-a1b9-35baea448fb6"
