@@ -1540,8 +1540,15 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}}}"
+							}
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{URL}}/api/certificates"
 					},
 					"response": []
 				}
