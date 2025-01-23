@@ -1513,6 +1513,24 @@
 			"id": "94b2f448-401e-496d-a1b9-35baea448fb6"
 		},
 		{
+			"name": "upload-api",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "df24ff8b-6260-4122-b7a8-dde953cbbc40",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "eddb8670-ef01-47a6-84f8-95f4312b4c91"
+		},
+		{
 			"name": "global-search",
 			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
 			"protocolProfileBehavior": {
