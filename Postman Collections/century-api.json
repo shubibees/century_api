@@ -1664,6 +1664,51 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "http://49.205.180.247:3007/api/product-categories?filters[Name][$eq]=Natzura&populate[0]=parent_category&populate[1]=parent_category.parent_category&populate[2]=parent_category.parent_category.parent_category",
+			"id": "b97d1d17-2fef-4e53-8e9e-6c56da47c849",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://49.205.180.247:3007/api/product-categories?filters[Name][$eq]=Natzura&populate[0]=parent_category&populate[1]=parent_category.parent_category&populate[2]=parent_category.parent_category.parent_category",
+					"protocol": "http",
+					"host": [
+						"49",
+						"205",
+						"180",
+						"247"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"product-categories"
+					],
+					"query": [
+						{
+							"key": "filters[Name][$eq]",
+							"value": "Natzura"
+						},
+						{
+							"key": "populate[0]",
+							"value": "parent_category"
+						},
+						{
+							"key": "populate[1]",
+							"value": "parent_category.parent_category"
+						},
+						{
+							"key": "populate[2]",
+							"value": "parent_category.parent_category.parent_category"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
