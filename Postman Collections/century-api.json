@@ -1462,7 +1462,7 @@
 			"name": "invistor",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "incestors,get",
 					"id": "d29a706b-f1ab-49b7-800b-6c74a1b72171",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
