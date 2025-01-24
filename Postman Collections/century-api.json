@@ -1556,6 +1556,24 @@
 			"id": "f92bcc40-261b-418d-a50b-be2836725980"
 		},
 		{
+			"name": "product-home-logic",
+			"item": [
+				{
+					"name": "/api/products",
+					"id": "7660cb9d-c272-40be-93d6-359f73e0d4b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "28641a97-fc71-4449-8e9a-0b943a467580"
+		},
+		{
 			"name": "global-search",
 			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
 			"protocolProfileBehavior": {
@@ -1768,6 +1786,18 @@
 		{
 			"name": "New Request",
 			"id": "d2f7df38-6f23-432b-b1ee-f6b983e5bbd7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "2507fba2-3461-4ad9-95b8-d17cba4771b1",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
