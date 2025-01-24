@@ -1566,7 +1566,27 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/products?filters[application_image][$null]=false&populate[0]=application_image",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "filters[application_image][$null]",
+									"value": "false"
+								},
+								{
+									"key": "populate[0]",
+									"value": "application_image"
+								}
+							]
+						}
 					},
 					"response": []
 				}
