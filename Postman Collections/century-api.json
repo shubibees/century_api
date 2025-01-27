@@ -1823,7 +1823,20 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "/api/target-groups?sort=Ordering",
+					"path": [
+						"api",
+						"target-groups"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "Ordering"
+						}
+					]
+				}
 			},
 			"response": []
 		}
