@@ -108,28 +108,27 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{ENTERY_TOKEN}}"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/product-categories?filters[level][$eq]=1&populate=children_categories&populate=children_categories.children_categories",
+							"raw": "{{URL}}/api/target-groups?sort=Ordering",
 							"host": [
-								"{{URL}}api"
+								"{{URL}}"
 							],
 							"path": [
-								"product-categories"
+								"api",
+								"target-groups"
 							],
 							"query": [
 								{
-									"key": "filters[level][$eq]",
-									"value": "1"
-								},
-								{
-									"key": "populate",
-									"value": "children_categories"
-								},
-								{
-									"key": "populate",
-									"value": "children_categories.children_categories"
+									"key": "sort",
+									"value": "Ordering"
 								}
 							]
 						}
@@ -551,37 +550,23 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzI5NjgzMjUwLCJleHAiOjE3Mjk3Njk2NTB9.XXcYd_JGtn84tG3VAL4MPHJPj5X1wX7MgS0glO28o-I"
-							}
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/blogs?populate=*&sort=published_date:desc&pagination[page]=1&pagination[pageSize]=6",
+							"raw": "{{URL}}/api/blogs?populate=*",
 							"host": [
-								"{{URL}}api"
+								"{{URL}}"
 							],
 							"path": [
+								"api",
 								"blogs"
 							],
 							"query": [
 								{
 									"key": "populate",
 									"value": "*"
-								},
-								{
-									"key": "sort",
-									"value": "published_date:desc"
-								},
-								{
-									"key": "pagination[page]",
-									"value": "1"
-								},
-								{
-									"key": "pagination[pageSize]",
-									"value": "6"
 								}
 							]
 						}
@@ -768,46 +753,42 @@
 					},
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": {
+								"token": "628238036f1c213fc30cf8f42ed73411dfd02da8a9cc293dc47686468c0d2d0cc0c7d31f122ed69d658e2b667a15bb2854730009ea49a4ced12621dcc3ed56b192b76d45258bf01da6de69adbdb55e19dd6be10a1ad8e551a3f056387a1df8f4932903d037ef9d8497358105e3ae3e84c94bbea3b080c0eff1b026fc388c6c40"
+							}
 						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/pages?filters[Slug][$eq]=careers&populate[0]=Banner,Banner.Backgrount_Image,Banner.Main_image&populate[1]=section&populate[2]=section.Listing&populate[3]=section.Listing.thumb&populate[4]=section.Listing.media&populate[5]=page_module",
+							"raw": "{{URL}}/api/pages?filters[Slug][$eq]=global-trends&populate[0]=Section&populate[1]=Section.Listing&&populate[2]=Section.Listing.Media",
 							"host": [
-								"{{URL}}api"
+								"{{URL}}"
 							],
 							"path": [
+								"api",
 								"pages"
 							],
 							"query": [
 								{
 									"key": "filters[Slug][$eq]",
-									"value": "careers"
+									"value": "global-trends"
 								},
 								{
 									"key": "populate[0]",
-									"value": "Banner,Banner.Backgrount_Image,Banner.Main_image"
+									"value": "Section"
 								},
 								{
 									"key": "populate[1]",
-									"value": "section"
+									"value": "Section.Listing"
+								},
+								{
+									"key": null,
+									"value": null
 								},
 								{
 									"key": "populate[2]",
-									"value": "section.Listing"
-								},
-								{
-									"key": "populate[3]",
-									"value": "section.Listing.thumb"
-								},
-								{
-									"key": "populate[4]",
-									"value": "section.Listing.media"
-								},
-								{
-									"key": "populate[5]",
-									"value": "page_module"
+									"value": "Section.Listing.Media"
 								}
 							]
 						}
@@ -1280,8 +1261,15 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "628238036f1c213fc30cf8f42ed73411dfd02da8a9cc293dc47686468c0d2d0cc0c7d31f122ed69d658e2b667a15bb2854730009ea49a4ced12621dcc3ed56b192b76d45258bf01da6de69adbdb55e19dd6be10a1ad8e551a3f056387a1df8f4932903d037ef9d8497358105e3ae3e84c94bbea3b080c0eff1b026fc388c6c40"
+							}
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{URL}}/api/addresses"
 					},
 					"response": []
 				}
@@ -1516,8 +1504,38 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ref",
+									"value": "investors.file-data",
+									"type": "text",
+									"uuid": "713c40c7-04d1-4ec6-8a92-57040369e8b3"
+								},
+								{
+									"key": "refId",
+									"value": "13",
+									"type": "text",
+									"uuid": "754fa6bc-1224-49ed-a2d8-cc345f1a524b"
+								},
+								{
+									"key": "field",
+									"value": "file",
+									"type": "text",
+									"uuid": "0d79b8b2-736a-4933-ba8d-3507f63a849d"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"uuid": "3e210cc6-69b0-40cb-ad39-fc99ca1ab897",
+									"src": "postman-cloud:///1ef59778-1c69-4470-8b62-4fe03c728c4e"
+								}
+							]
+						},
+						"url": "{{URL}}/api/upload"
 					},
 					"response": []
 				}
@@ -1536,6 +1554,17 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"uuid": "75a5a058-d8a3-462f-90d3-be163a311119",
+									"src": "postman-cloud:///1efdcad8-2f1c-43b0-b5fb-378cd2607fb6"
+								}
+							]
+						},
 						"url": "{{URL}}/api/upload"
 					},
 					"response": []
@@ -1556,12 +1585,31 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{ENTERY_TOKEN}}}}"
+								"token": "{{ENTERY_TOKEN}}"
 							}
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{URL}}/api/certificates"
+						"url": {
+							"raw": "{{URL}}/api/certificates?populate[0]=Tabs&populate[1]=Tabs.Logs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"certificates"
+							],
+							"query": [
+								{
+									"key": "populate[0]",
+									"value": "Tabs"
+								},
+								{
+									"key": "populate[1]",
+									"value": "Tabs.Logs"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -1861,7 +1909,76 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://49.205.180.247:3007/api/products?filters[alias][$eq]=club-prime&populate[0]=features.icon&populate[1]=Multiple_Image&populate[2]=product_categories&populate[3]=product_variants&populate[4]=icon&populate[5]=product_range&populate[6]=technical_specification&populate[7]=specification&populate[8]=product_certificate&populate[9]=product_specification&populate[10]=product_specification.specification_list&populate[11]=product_specification.specification_list.icon",
+					"protocol": "http",
+					"host": [
+						"49",
+						"205",
+						"180",
+						"247"
+					],
+					"port": "3007",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "filters[alias][$eq]",
+							"value": "club-prime"
+						},
+						{
+							"key": "populate[0]",
+							"value": "features.icon"
+						},
+						{
+							"key": "populate[1]",
+							"value": "Multiple_Image"
+						},
+						{
+							"key": "populate[2]",
+							"value": "product_categories"
+						},
+						{
+							"key": "populate[3]",
+							"value": "product_variants"
+						},
+						{
+							"key": "populate[4]",
+							"value": "icon"
+						},
+						{
+							"key": "populate[5]",
+							"value": "product_range"
+						},
+						{
+							"key": "populate[6]",
+							"value": "technical_specification"
+						},
+						{
+							"key": "populate[7]",
+							"value": "specification"
+						},
+						{
+							"key": "populate[8]",
+							"value": "product_certificate"
+						},
+						{
+							"key": "populate[9]",
+							"value": "product_specification"
+						},
+						{
+							"key": "populate[10]",
+							"value": "product_specification.specification_list"
+						},
+						{
+							"key": "populate[11]",
+							"value": "product_specification.specification_list.icon"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -1872,8 +1989,50 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "628238036f1c213fc30cf8f42ed73411dfd02da8a9cc293dc47686468c0d2d0cc0c7d31f122ed69d658e2b667a15bb2854730009ea49a4ced12621dcc3ed56b192b76d45258bf01da6de69adbdb55e19dd6be10a1ad8e551a3f056387a1df8f4932903d037ef9d8497358105e3ae3e84c94bbea3b080c0eff1b026fc388c6c40"
+					}
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/investors?populate[1]=icon&populate[2]=investor_info&populate[3]=investor_info.file_info&&populate[4]=investor_info.file_info.file&sort=Ordering",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"investors"
+					],
+					"query": [
+						{
+							"key": "populate[1]",
+							"value": "icon"
+						},
+						{
+							"key": "populate[2]",
+							"value": "investor_info"
+						},
+						{
+							"key": "populate[3]",
+							"value": "investor_info.file_info"
+						},
+						{
+							"key": null,
+							"value": null
+						},
+						{
+							"key": "populate[4]",
+							"value": "investor_info.file_info.file"
+						},
+						{
+							"key": "sort",
+							"value": "Ordering"
+						}
+					]
+				}
 			},
 			"response": []
 		}
