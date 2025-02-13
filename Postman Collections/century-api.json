@@ -1272,6 +1272,18 @@
 						"url": "{{URL}}api/users/me"
 					},
 					"response": []
+				},
+				{
+					"name": "address",
+					"id": "bd3cb075-b230-4801-bb90-c91c7138827d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "2c83d9d4-48dd-4d3c-a2b9-acfa6e8ede71"
