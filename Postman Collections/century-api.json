@@ -1105,7 +1105,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"shubham\",\r\n    \"username\": \"shubkpp\",\r\n    \"email\": \"shubkpp@gmail.com\",\r\n    \"password\": \"1234567895\",\r\n    \"phone\":\"8766285154\"\r\n}",
+							"raw": "{\r\n    \"username\": \"shubkpp\",\r\n    \"email\": \"shubkpp@gmail.com\",\r\n    \"password\": \"1234567895\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
