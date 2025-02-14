@@ -1089,6 +1089,18 @@
 								"url": "{{URL}}/api/addresses"
 							},
 							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "76c7fc82-dc84-4566-aad3-a983236d2c33",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "0e75430c-1ee1-4e2e-bbf5-03c60dd88542"
