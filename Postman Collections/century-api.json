@@ -1131,6 +1131,34 @@
 								"header": []
 							},
 							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "865763cb-cce1-4867-9e1a-a54ee0ccb464",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{JWT}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"user\": {\r\n        \"connect\":[\"b2kqluys6oejz0oi4rpiaaac\"]\r\n    },\r\n    \"order_id\": \"string\",\r\n    \"billing_address\": {\r\n      \"id\": 0,\r\n      \"address\": \"string\",\r\n      \"firstName\": \"string\",\r\n      \"email\": \"user@example.com\",\r\n      \"phone_no\": \"string\",\r\n      \"pincode\": \"string\",\r\n      \"lift_available\": true,\r\n      \"floor\": 0,\r\n      \"lastName\": \"string\",\r\n      \"state\": \"string\",\r\n      \"city\": \"string\"\r\n    },\r\n    \"shipping_address\": {\r\n      \"id\": 0,\r\n      \"address\": \"string\",\r\n      \"firstName\": \"string\",\r\n      \"email\": \"user@example.com\",\r\n      \"phone_no\": \"string\",\r\n      \"pincode\": \"string\",\r\n      \"lift_available\": true,\r\n      \"floor\": 0,\r\n      \"lastName\": \"string\",\r\n      \"state\": \"string\",\r\n      \"city\": \"string\"\r\n    },\r\n    \"product_list\": [\r\n      {\r\n        \"id\": 0,\r\n        \"product_variant\": {\r\n          \"id\": 0,\r\n          \"documentId\": \"string\"\r\n        },\r\n        \"quantity\": 0,\r\n        \"width\": \"string\",\r\n        \"lenght\": \"string\",\r\n        \"thickness\": \"string\",\r\n        \"price\": 0\r\n      }\r\n    ],\r\n    \"shipping_charges\": 0,\r\n    \"unloading_charges\": 0,\r\n    \"gst\": 0,\r\n    \"grand_total\": 0,\r\n    \"locale\": \"string\",\r\n    \"localizations\": [\r\n      \"string or id\",\r\n      \"string or id\"\r\n    ]\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{URL}}/api/orders"
+							},
+							"response": []
 						}
 					],
 					"id": "326f5d0d-9518-4d0e-9ea8-ee71eba79274"
