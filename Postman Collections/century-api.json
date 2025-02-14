@@ -1101,6 +1101,18 @@
 								"header": []
 							},
 							"response": []
+						},
+						{
+							"name": "put",
+							"id": "aa341510-4633-4978-a824-5335b44fe226",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "0e75430c-1ee1-4e2e-bbf5-03c60dd88542"
