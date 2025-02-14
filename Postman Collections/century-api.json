@@ -1136,6 +1136,24 @@
 					"id": "326f5d0d-9518-4d0e-9ea8-ee71eba79274"
 				},
 				{
+					"name": "wish",
+					"item": [
+						{
+							"name": "New Request",
+							"id": "30a69e89-3cca-4ccd-b2d0-c7857c33cb9b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
+					"id": "0dc74f7c-72b6-444c-a547-2f62d48a4791"
+				},
+				{
 					"name": "user Registration",
 					"event": [
 						{
