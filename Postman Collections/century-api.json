@@ -1079,7 +1079,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"data\": {\r\n        \"firstName\": \"ravi\",\r\n        \"title\": \"Home\",\r\n        \"lastName\": \"gupta\",\r\n        \"phone_no\": \"7067765383\",\r\n        \"state\": {\r\n            \"connect\":[\"xavsspxxllf5ffmdbfefhogn\"]\r\n        },\r\n        \"city\": {\r\n            \"connect\":[\"dsfn0fmdm5gmr0m685ugy667\"]\r\n        },\r\n        \"pincode\": \"110052\",\r\n        \"address\": \"shastri nagar\",\r\n        \"lift_available\": \"true\",\r\n        \"isDefault\": false,\r\n        \"floor\": 3\r\n    }\r\n}",
+									"raw": "{\r\n    \"data\": {\r\n        \"firstName\": \"ravi\",\r\n        \"title\": \"Home\",\r\n        \"lastName\": \"gupta\",\r\n        \"phone_no\": \"7067765383\",\r\n        // \"state\": {\r\n        //     \"connect\":[\"xavsspxxllf5ffmdbfefhogn\"]\r\n        // },\r\n        // \"city\": {\r\n        //     \"connect\":[\"dsfn0fmdm5gmr0m685ugy667\"]\r\n        // },\r\n        \"pincode\": \"110052\",\r\n        \"address\": \"shastri nagar\",\r\n        \"lift_available\": \"true\",\r\n        \"isDefault\": false,\r\n        \"floor\": 3\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
