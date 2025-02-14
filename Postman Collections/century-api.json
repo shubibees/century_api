@@ -1159,6 +1159,18 @@
 								"url": "{{URL}}/api/orders"
 							},
 							"response": []
+						},
+						{
+							"name": "put",
+							"id": "327e6836-c150-4d6c-b1d6-1a80693cc1ed",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "326f5d0d-9518-4d0e-9ea8-ee71eba79274"
