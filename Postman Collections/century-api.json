@@ -1817,6 +1817,24 @@
 			"id": "28641a97-fc71-4449-8e9a-0b943a467580"
 		},
 		{
+			"name": "ai",
+			"item": [
+				{
+					"name": "produt-category",
+					"id": "8bf9c622-79d4-48c0-8160-cd60b5cb78a7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "d90b8a8f-371b-44ed-9cf8-8fd25b582772"
+		},
+		{
 			"name": "global-search",
 			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
 			"protocolProfileBehavior": {
