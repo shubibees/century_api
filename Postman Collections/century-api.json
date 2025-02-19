@@ -1295,21 +1295,21 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{PUSH_DATA}}"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5OTY0Njk2LCJleHAiOjE3NDAwNTEwOTZ9.NJC4CojcCseea-waa6WAcTfz_4eqt7WmnUyg15cxyNs"
 							}
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"state_id\":10,\r\n  \"city_id\":508,\r\n  \"items\": [\r\n    {\r\n      \"product_id\": 2,\r\n      \"variant_id\": 1357, // Optional\r\n      \"quantity\": 1\r\n    },\r\n     {\r\n      \"product_id\": 2,\r\n      \"variant_id\": 1356, // Optional\r\n      \"quantity\": 5\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"data\":{\r\n        \"product_list\":[\r\n            {\r\n\r\n            \"product_variant\":{\r\n                \"connect\":[\"sll8qe63yyizok1x22ydaizh\"]\r\n            },\r\n            \"quantity\":1\r\n            }\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{URL}}api/carts/add"
+						"url": "{{URL}}/api/carts"
 					},
 					"response": []
 				},
