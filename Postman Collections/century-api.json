@@ -1316,7 +1316,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"shub3_er33add3r\",\r\n    \"email\": \"shub_adrdf43@gmail.com\",\r\n    \"password\": \"1234567895\",\r\n    \"state\":{\r\n        \"connect\":[\"tcj7jpgyv7u10g9ehvoukkn9\"]\r\n    },\r\n    \"city\":{\r\n        \"connect\":[\"i34uq7ohhojm5xx3st3o7hhv\"]\r\n    }\r\n}",
+							"raw": "{\r\n    \"username\": \"shddub3_er33add3r\",\r\n    \"email\": \"shvub_adf43@gmail.com\",\r\n    \"password\": \"1234567895\",\r\n    \"state\":{\r\n        \"connect\":[\"tcj7jpgyv7u10g9ehvoukkn9\"]\r\n    },\r\n    \"city\":{\r\n        \"connect\":[\"i34uq7ohhojm5xx3st3o7hhv\"]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1354,7 +1354,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"identifier\":\"shubkp@gmail.com\" ,\r\n    \"password\": \"1234567895\"\r\n\r\n}",
+							"raw": "{\r\n    \"identifier\":\"shvub_adf43@gmail.com\" ,\r\n    \"password\": \"1234567895\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
