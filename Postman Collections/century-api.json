@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "f9e043fa-e3af-46b0-bea0-10d061117478",
 		"name": "strapi_api",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -464,18 +464,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}api/products?filters[product_priceings][location_state][state][$eq]=Punjab&populate[0]=seo&populate[1]=product_priceings&populate[2]=product_priceings.location_state&populate[3]=product_categories",
+							"raw": "{{URL}}/api/product-categories?filters[$or][0][Name][$contains]=Lucida&filters[$or][1][Name][$contains]=Plywood",
 							"host": [
-								"{{URL}}api"
+								"{{URL}}"
 							],
 							"path": [
-								"products"
+								"api",
+								"product-categories"
 							],
 							"query": [
-								{
-									"key": "filters[product_priceings][location_state][state][$eq]",
-									"value": "Punjab"
-								},
 								{
 									"key": "filters[product_categories][slug][$eq]",
 									"value": "silk-tuff",
@@ -483,20 +480,12 @@
 									"disabled": true
 								},
 								{
-									"key": "populate[0]",
-									"value": "seo"
+									"key": "filters[$or][0][Name][$contains]",
+									"value": "Lucida"
 								},
 								{
-									"key": "populate[1]",
-									"value": "product_priceings"
-								},
-								{
-									"key": "populate[2]",
-									"value": "product_priceings.location_state"
-								},
-								{
-									"key": "populate[3]",
-									"value": "product_categories"
+									"key": "filters[$or][1][Name][$contains]",
+									"value": "Plywood"
 								}
 							]
 						}
@@ -555,7 +544,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/api/blogs?populate=*",
+							"raw": "{{URL}}/api/blogs?filters[documentId][$in][0]=moznygd6elhbj6a72ts6y7mo&filters[documentId][$in][1]=ef3vyvsgd1n2dbyi59tnz1gr&filters[documentId][$in][2]=u92u56by0x8plvktjex9s44i",
 							"host": [
 								"{{URL}}"
 							],
@@ -565,8 +554,16 @@
 							],
 							"query": [
 								{
-									"key": "populate",
-									"value": "*"
+									"key": "filters[documentId][$in][0]",
+									"value": "moznygd6elhbj6a72ts6y7mo"
+								},
+								{
+									"key": "filters[documentId][$in][1]",
+									"value": "ef3vyvsgd1n2dbyi59tnz1gr"
+								},
+								{
+									"key": "filters[documentId][$in][2]",
+									"value": "u92u56by0x8plvktjex9s44i"
 								}
 							]
 						}
@@ -1075,11 +1072,11 @@
 										"token": "{{JWT}}"
 									}
 								},
-								"method": "POST",
+								"method": "GET",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"data\": {\r\n        \"firstName\": \"dfdasfsaf\",\r\n        \"title\": \"Home\",\r\n        \"lastName\": \"gupta\",\r\n        \"phone_no\": \"7067765383\",\r\n        // \"state\": {\r\n        //     \"connect\":[\"xavsspxxllf5ffmdbfefhogn\"]\r\n        // },\r\n        // \"city\": {\r\n        //     \"connect\":[\"dsfn0fmdm5gmr0m685ugy667\"]\r\n        // },\r\n        \"pincode\": \"110052\",\r\n        \"address\": \"shastri nagar\",\r\n        \"lift_available\": \"true\",\r\n        \"isDefault\": false,\r\n        \"floor\": 3\r\n    }\r\n}",
+									"raw": "{\r\n    \"data\": {\r\n        \"firstName\": \"fdfdf\",\r\n        \"title\": \"Home\",\r\n        \"lastName\": \"gupta\",\r\n        \"phone_no\": \"7067765383\",\r\n        \"state\": { \"connect\": [{ \"documentId\": \"xavsspxxllf5ffmdbfefhogn\" }] },\r\n        \"city\": { \"connect\": [{ \"documentId\": \"dsfn0fmdm5gmr0m685ugy667\" }] },\r\n        \"pincode\": \"110052\",\r\n        \"address\": \"shastri nagar\",\r\n        \"lift_available\": \"true\",\r\n        \"isDefault\": false,\r\n        \"floor\": 3\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1097,8 +1094,15 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{JWT}}"
+									}
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": "{{URL}}/api/addresses"
 							},
 							"response": []
 						},
@@ -1109,8 +1113,24 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{JWT}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"firstName\": \"ooorange\",\r\n        \"title\": \"Home\",\r\n        \"lastName\": \"gupta\",\r\n        \"phone_no\": \"7067765383\",\r\n        \"state\": { \"connect\": [{ \"documentId\": \"xavsspxxllf5ffmdbfefhogn\" }] },\r\n        \"city\": { \"connect\": [{ \"documentId\": \"dsfn0fmdm5gmr0m685ugy667\" }] },\r\n        \"pincode\": \"110052\",\r\n        \"address\": \"shastri nagar\",\r\n        \"lift_available\": \"true\",\r\n        \"isDefault\": false,\r\n        \"floor\": 3\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{URL}}/api/addresses/qdtadr1oa7h24q7gp63tp9xx"
 							},
 							"response": []
 						}
@@ -1127,8 +1147,15 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{JWT}}"
+									}
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": "{{URL}}/api/orders"
 							},
 							"response": []
 						},
@@ -1149,7 +1176,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"data\": {\r\n    \"billing_address\": {\r\n      \"address\": \"string\",\r\n      \"firstName\": \"string\",\r\n      \"email\": \"user@example.com\",\r\n      \"phone_no\": \"string\",\r\n      \"pincode\": \"string\",\r\n      \"lift_available\": true,\r\n      \"floor\": 0,\r\n      \"lastName\": \"string\",\r\n      \"state\": \"string\",\r\n      \"city\": \"string\"\r\n    },\r\n    \"shipping_address\": {\r\n      \"address\": \"string\",\r\n      \"firstName\": \"string\",\r\n      \"email\": \"user@example.com\",\r\n      \"phone_no\": \"string\",\r\n      \"pincode\": \"string\",\r\n      \"lift_available\": true,\r\n      \"floor\": 0,\r\n      \"lastName\": \"string\",\r\n      \"state\": \"string\",\r\n      \"city\": \"string\"\r\n    },\r\n    \"product_list\": [\r\n      {\r\n        \"product_variant\": {\r\n            \"connect\":[\"fbf8jbn5wa4r7ewsov4m1a63\"]\r\n        },\r\n        \"quantity\": 0,\r\n        \"width\": \"string\",\r\n        \"lenght\": \"string\",\r\n        \"thickness\": \"string\",\r\n        \"price\": 0\r\n      }\r\n    ]\r\n  }\r\n}",
+									"raw": "{\r\n  \"data\": {\r\n    \"billing_address\": {\r\n      \"address\": \"string\",\r\n      \"firstName\": \"ordername\",\r\n      \"email\": \"user@example.com\",\r\n      \"phone_no\": \"string\",\r\n      \"pincode\": \"string\",\r\n      \"lift_available\": true,\r\n      \"floor\": 0,\r\n      \"lastName\": \"string\",\r\n      \"state\": \"string\",\r\n      \"city\": \"string\"\r\n    },\r\n    \"shipping_address\": {\r\n      \"address\": \"string\",\r\n      \"firstName\": \"string\",\r\n      \"email\": \"user@example.com\",\r\n      \"phone_no\": \"string\",\r\n      \"pincode\": \"string\",\r\n      \"lift_available\": true,\r\n      \"floor\": 0,\r\n      \"lastName\": \"string\",\r\n      \"state\": \"string\",\r\n      \"city\": \"string\"\r\n    },\r\n    \"product_list\": [\r\n      {\r\n        \"product_variant\": {\r\n            \"connect\":[\"fbf8jbn5wa4r7ewsov4m1a63\"]\r\n        },\r\n        \"quantity\": 0,\r\n        \"width\": \"string\",\r\n        \"lenght\": \"string\",\r\n        \"thickness\": \"string\",\r\n        \"price\": 0\r\n      }\r\n    ]\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1173,7 +1200,7 @@
 										"token": "{{JWT}}"
 									}
 								},
-								"method": "GET",
+								"method": "PUT",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1184,7 +1211,7 @@
 										}
 									}
 								},
-								"url": "{{URL}}/api/orders/f10sx0va01mgopro3jfdt1k8"
+								"url": "{{URL}}/api/orders/r92csu51a6sx7t84pntnaf1f"
 							},
 							"response": []
 						}
@@ -1201,13 +1228,39 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{JWT}}"
+									}
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": "{{URL}}/api/product-wishlists"
 							},
 							"response": []
 						}
 					],
 					"id": "0dc74f7c-72b6-444c-a547-2f62d48a4791"
+				},
+				{
+					"name": "carts",
+					"item": [
+						{
+							"name": "New Request",
+							"id": "f352c922-91d8-4c57-bb57-901910be24e3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{URL}}/api/carts"
+							},
+							"response": []
+						}
+					],
+					"id": "35b7a351-b86a-4074-9b75-3603fe3d7e27"
 				},
 				{
 					"name": "user Registration",
@@ -1236,7 +1289,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"shubkpp\",\r\n    \"email\": \"shubkpp@gmail.com\",\r\n    \"password\": \"1234567895\"\r\n}",
+							"raw": "{\r\n    \"username\": \"shub3_er33add3r\",\r\n    \"email\": \"shub_adrdf43@gmail.com\",\r\n    \"password\": \"1234567895\",\r\n    \"state\":{\r\n        \"connect\":[\"tcj7jpgyv7u10g9ehvoukkn9\"]\r\n    },\r\n    \"city\":{\r\n        \"connect\":[\"i34uq7ohhojm5xx3st3o7hhv\"]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1274,7 +1327,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"identifier\":\"shubkpp@gmail.com\" ,\r\n    \"password\": \"1234567895\"\r\n\r\n}",
+							"raw": "{\r\n    \"identifier\":\"shubkp@gmail.com\" ,\r\n    \"password\": \"1234567895\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1295,14 +1348,14 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5OTY0Njk2LCJleHAiOjE3NDAwNTEwOTZ9.NJC4CojcCseea-waa6WAcTfz_4eqt7WmnUyg15cxyNs"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsImlhdCI6MTczOTk2OTU3OSwiZXhwIjoxNzQwMDU1OTc5fQ.NDQaAvGVfDBTIQH5lhC9CoSIF6zTVmF6NOKzV6pNlyo"
 							}
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"data\":{\r\n        \"product_list\":[\r\n            {\r\n\r\n            \"product_variant\":{\r\n                \"connect\":[\"sll8qe63yyizok1x22ydaizh\"]\r\n            },\r\n            \"quantity\":1\r\n            }\r\n        ]\r\n    }\r\n}",
+							"raw": "{\r\n    \"data\":{\r\n        \"product_list\":[\r\n            {\r\n            \"product_variant\":{\r\n                \"connect\":[\"sll8qe63yyizok1x22ydaizh\"]\r\n            }\r\n            }\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1414,12 +1467,27 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "628238036f1c213fc30cf8f42ed73411dfd02da8a9cc293dc47686468c0d2d0cc0c7d31f122ed69d658e2b667a15bb2854730009ea49a4ced12621dcc3ed56b192b76d45258bf01da6de69adbdb55e19dd6be10a1ad8e551a3f056387a1df8f4932903d037ef9d8497358105e3ae3e84c94bbea3b080c0eff1b026fc388c6c40"
+								"token": "{{JWT}}"
 							}
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{URL}}/api/addresses"
+						"url": {
+							"raw": "{{URL}}/api/my-addresses?populate=*",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"my-addresses"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "*"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -1827,7 +1895,8 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{URL}}/blogs"
 					},
 					"response": []
 				}
