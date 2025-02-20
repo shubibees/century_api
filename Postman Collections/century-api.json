@@ -1259,18 +1259,18 @@
 										"token": "{{JWT}}"
 									}
 								},
-								"method": "POST",
+								"method": "PUT",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"data\":{\r\n        \"product_list\":[\r\n            // {\r\n            // \"product_variant\":{\r\n            //     \"connect\":[\"fbf8jbn5wa4r7ewsov4m1a63\"]\r\n            // },\r\n            // \"quantity\":2\r\n            // },\r\n            //  {\r\n            // \"product_variant\":{\r\n            //     \"connect\":[\"sll8qe63yyizok1x22ydaizh\"]\r\n            // },\r\n            // \"quantity\":2\r\n            // },\r\n            //  {\r\n            // \"product_variant\":{\r\n            //     \"connect\":[\"fbf8jbn5wa4r7ewsov4m1a63\"]\r\n            // },\r\n            // \"quantity\":2\r\n            // }\r\n        ]\r\n    }\r\n}",
+									"raw": "{\r\n    \"data\":{\r\n        \"product_list\":{\r\n    \"set\": [\r\n      {\r\n        \"product_variant\": \"b2201quc1w9zayex5xz6mhb5\",\r\n        \"quantity\": 1\r\n      },\r\n      {\r\n        \"product_variant\": \"qlokkebozz4hmjj3o2h9xtg4\",\r\n        \"quantity\": 1\r\n      },\r\n      {\r\n        \"product_variant\": \"zytvjtg6oydlcb676r3iv124\",\r\n        \"quantity\": 1\r\n      }\r\n    ]\r\n  }\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{URL}}/api/carts/ml5c4ykvavljpgrqat63exye"
+								"url": "{{URL}}/api/carts/r8rfjt0cu335dy6nslndwjyw"
 							},
 							"response": []
 						},
