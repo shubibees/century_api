@@ -1253,8 +1253,23 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImlhdCI6MTc0MDAzMDk4NiwiZXhwIjoxNzQwMTE3Mzg2fQ.OlzZXIcqCCNDT7cew5ecx86tpSZIq4L1uBURmzzwh9A"
+									}
+								},
+								"method": "PUT",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"product_list\":[\r\n            {\r\n            \"id\":10,\r\n            \"quantity\":2\r\n            }\r\n        ]\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{URL}}/api/carts"
 							},
 							"response": []
