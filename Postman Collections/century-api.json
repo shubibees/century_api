@@ -1263,7 +1263,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"data\":{\r\n        \"product_list\":[\r\n            {\r\n            \"product_variant\":{\r\n                \"connect\":[\"sll8qe63yyizok1x22ydaizh\"]\r\n            },\r\n            \"quantity\":2\r\n            }\r\n        ]\r\n    }\r\n}",
+									"raw": "{\r\n    \"data\":{\r\n        \"product_list\":[\r\n            // {\r\n            // \"product_variant\":{\r\n            //     \"connect\":[\"fbf8jbn5wa4r7ewsov4m1a63\"]\r\n            // },\r\n            // \"quantity\":2\r\n            // },\r\n            //  {\r\n            // \"product_variant\":{\r\n            //     \"connect\":[\"sll8qe63yyizok1x22ydaizh\"]\r\n            // },\r\n            // \"quantity\":2\r\n            // },\r\n            //  {\r\n            // \"product_variant\":{\r\n            //     \"connect\":[\"fbf8jbn5wa4r7ewsov4m1a63\"]\r\n            // },\r\n            // \"quantity\":2\r\n            // }\r\n        ]\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
