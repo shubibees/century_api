@@ -1537,8 +1537,42 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{JWT}}"
+							}
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/catalogues?filters[catelogue_category][slug]=century-lookbook&populate[0]=catelogue_category&populate[1]=download_catalogue&populate[2]=image",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"catalogues"
+							],
+							"query": [
+								{
+									"key": "filters[catelogue_category][slug]",
+									"value": "century-lookbook"
+								},
+								{
+									"key": "populate[0]",
+									"value": "catelogue_category"
+								},
+								{
+									"key": "populate[1]",
+									"value": "download_catalogue"
+								},
+								{
+									"key": "populate[2]",
+									"value": "image"
+								}
+							]
+						}
 					},
 					"response": []
 				}
