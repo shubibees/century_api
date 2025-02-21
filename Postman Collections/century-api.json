@@ -2369,6 +2369,18 @@
 				"header": []
 			},
 			"response": []
+		},
+		{
+			"name": "gobal-search",
+			"id": "82f517f4-1af9-4980-af19-7d91d69a551c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
