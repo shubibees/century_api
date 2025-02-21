@@ -2380,11 +2380,11 @@
 				"auth": {
 					"type": "noauth"
 				},
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"data\":{\r\n        \"query\":\"laminate\",\r\n        \"type\":\"all\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"data\":{\r\n        \"query\":\"laminate\",\r\n        \"type\":\"product\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
