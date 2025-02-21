@@ -2378,13 +2378,16 @@
 			},
 			"request": {
 				"auth": {
-					"type": "noauth"
+					"type": "bearer",
+					"bearer": {
+						"token": "628238036f1c213fc30cf8f42ed73411dfd02da8a9cc293dc47686468c0d2d0cc0c7d31f122ed69d658e2b667a15bb2854730009ea49a4ced12621dcc3ed56b192b76d45258bf01da6de69adbdb55e19dd6be10a1ad8e551a3f056387a1df8f4932903d037ef9d8497358105e3ae3e84c94bbea3b080c0eff1b026fc388c6c40"
+					}
 				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"data\":{\r\n        \"query\":\"laminate\",\r\n        \"type\":\"product\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"data\":{\r\n        \"query\":\"laminate\",\r\n        \"type\":\"blog\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
