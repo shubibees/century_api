@@ -2387,7 +2387,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"data\":{\r\n        \"query\":\"laminate\",\r\n        \"type\":\"blog\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"data\":{\r\n        \"query\":\"laminate\",\r\n        \"type\":\"product\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
