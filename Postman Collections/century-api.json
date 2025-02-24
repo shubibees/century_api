@@ -1584,7 +1584,8 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{URL}}/api/auth/forgot-password"
 					},
 					"response": []
 				}
