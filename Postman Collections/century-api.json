@@ -1575,6 +1575,18 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "forgate-password",
+					"id": "1bda3588-fbfd-4f41-bdf4-bfdbce65937f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "2c83d9d4-48dd-4d3c-a2b9-acfa6e8ede71"
