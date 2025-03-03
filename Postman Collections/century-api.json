@@ -524,6 +524,18 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "delete",
+					"id": "fa8d768c-533c-479b-8578-38d4c049506d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "c3cec88f-9455-465f-860d-2c87f09b3bdc"
