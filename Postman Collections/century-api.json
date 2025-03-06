@@ -532,8 +532,9 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [],
+						"url": "http://49.205.180.247:3007/api/products/xmyeo8lbrh6gw854o3oannt8"
 					},
 					"response": []
 				}
@@ -1271,7 +1272,7 @@
 										"token": "{{JWT}}"
 									}
 								},
-								"method": "PUT",
+								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -1282,7 +1283,7 @@
 										}
 									}
 								},
-								"url": "{{URL}}/api/carts/"
+								"url": "{{URL}}/api/carts"
 							},
 							"response": []
 						},
@@ -1328,7 +1329,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"shddubbeyyerrer33add3r\",\r\n    \"email\": \"shubhamkiyydrrrres@gmail.com\",\r\n    \"password\": \"1234567895\"\r\n}",
+							"raw": "{\r\n    \"username\": \"ppppppp\",\r\n    \"email\": \"pppppp@gmail.com\",\r\n    \"password\": \"1234567895\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1366,7 +1367,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"identifier\":\"shvub_adf43@gmail.com\" ,\r\n    \"password\": \"1234567895\"\r\n\r\n}",
+							"raw": "{\r\n    \"identifier\":\"shubhamkibees@gmail.com\" ,\r\n    \"password\": \"1234567895\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1595,8 +1596,17 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"shubhamkibees@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "{{URL}}/api/auth/forgot-password"
 					},
 					"response": []
@@ -2390,8 +2400,15 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{ENTERY_TOKEN}}"
+					}
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "{{URL}}/api/catelogue-enumerator"
 			},
 			"response": []
 		},
