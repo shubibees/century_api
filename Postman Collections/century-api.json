@@ -2012,6 +2012,24 @@
 			"id": "d90b8a8f-371b-44ed-9cf8-8fd25b582772"
 		},
 		{
+			"name": "test-foldre",
+			"item": [
+				{
+					"name": "cron-job",
+					"id": "57db35a7-dbcd-4a6d-804f-022a2c92e83e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "551efb1a-072d-41bf-9814-ef60cdde6118"
+		},
+		{
 			"name": "global-search",
 			"id": "563f7449-27d0-4425-8b0a-6c4238dc4974",
 			"protocolProfileBehavior": {
