@@ -2457,6 +2457,18 @@
 				"url": "{{URL}}/api/global-search"
 			},
 			"response": []
+		},
+		{
+			"name": "test whatshap",
+			"id": "64a09a21-83d4-43ec-9b98-887dc265bbd6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
