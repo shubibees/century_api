@@ -2466,15 +2466,42 @@
 			},
 			"request": {
 				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"wa_number\":\"9013938723\",\r\n    \"customer_name\":\"customer\",\r\n    \"customer_state\":\"delhi\",\r\n    \"customer_city\":\"delhi\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
+				"header": [
+					{
+						"key": "Key",
+						"value": "Content-Type",
+						"type": "text"
+					},
+					{
+						"key": "Value",
+						"value": "multipart/form-data",
+						"type": "text"
 					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "wa_number",
+							"value": "7067765383",
+							"type": "text"
+						},
+						{
+							"key": "customer_name",
+							"value": "Customer",
+							"type": "text"
+						},
+						{
+							"key": "customer_state",
+							"value": "delhi",
+							"type": "text"
+						},
+						{
+							"key": "customer_city",
+							"value": "delhi",
+							"type": "text"
+						}
+					]
 				},
 				"url": "https://callerportal.centuryply.com/services/wa/welcomeTemplateMsgV2"
 			},
