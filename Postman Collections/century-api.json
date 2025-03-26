@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "f9e043fa-e3af-46b0-bea0-10d061117478",
 		"name": "strapi_api",
-		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -1290,6 +1290,18 @@
 						{
 							"name": "New Request",
 							"id": "a670eefc-37e6-48d2-a354-a79b2c2068f9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "email-reconfermaint",
+							"id": "af185776-b471-48c5-ad05-104e54400f44",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
