@@ -1298,18 +1298,6 @@
 								"header": []
 							},
 							"response": []
-						},
-						{
-							"name": "email-reconfermaint",
-							"id": "af185776-b471-48c5-ad05-104e54400f44",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
 						}
 					],
 					"id": "35b7a351-b86a-4074-9b75-3603fe3d7e27"
@@ -1387,6 +1375,18 @@
 							}
 						},
 						"url": "{{URL}}/api/auth/local"
+					},
+					"response": []
+				},
+				{
+					"name": "email-reconfermaint",
+					"id": "af185776-b471-48c5-ad05-104e54400f44",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				},
@@ -2053,25 +2053,16 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "{{URL}}api/global-search?search=Century Ply brings to you Extremely Durable&state=Delhi",
-					"host": [
-						"{{URL}}api"
-					],
-					"path": [
-						"global-search"
-					],
-					"query": [
-						{
-							"key": "search",
-							"value": "Century Ply brings to you Extremely Durable"
-						},
-						{
-							"key": "state",
-							"value": "Delhi"
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\":\"Add Value, Add Style: Invest in Your Home with CenturyLaminates by Manish Malhotra\",\r\n    \"type\":\"all\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					]
-				}
+					}
+				},
+				"url": "{{URL}}/api/global-search"
 			},
 			"response": []
 		},
